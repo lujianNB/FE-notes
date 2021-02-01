@@ -3,21 +3,21 @@
  * @LastEditors: 卢建
  * @Description: cookie与storage的区别与用法
  * @Date: 2021-02-01 14:10:06
- * @LastEditTime: 2021-02-01 14:54:41
+ * @LastEditTime: 2021-02-01 16:00:55
 -->
 # cookie与storage的区别与用法
 
 * cookie
 
-cookie非常小，它的大小限制为4KB左右。它的主要用途有保存登录信息，比如你登录某个网站市场可以看到“记住密码”，这通常就是通过在 Cookie 中存入一段辨别用户身份的数据来实现的。
+        cookie非常小，它的大小限制为4KB左右。它的主要用途有保存登录信息，比如你登录某个网站市场可以看到“记住密码”，这通常就是通过在 Cookie 中存入一段辨别用户身份的数据来实现的。
 
 * localStorage
 
- localStorage的生命周期是永久性的。假若使用localStorage存储数据，即使关闭浏览器，也不会让数据消失，除非主动的去删除数据，localStorage有length属性，可以查看其有多少条记录的数据。
+        localStorage的生命周期是永久性的。假若使用localStorage存储数据，即使关闭浏览器，也不会让数据消失，除非主动的去删除数据，localStorage有length属性，可以查看其有多少条记录的数据。
 
  * sessionStorage
 
- sessionStorage 的生命周期是在浏览器关闭前。也就是说，在整个浏览器未关闭前，其数据一直都是存在的。sessionStorage也有length属性，其基本的判断和使用方法和localStorage的使用是一致的。
+        sessionStorage 的生命周期是在浏览器关闭前。也就是说，在整个浏览器未关闭前，其数据一直都是存在的。sessionStorage也有length属性，其基本的判断和使用方法和localStorage的使用是一致的。
 
  * 三者的异同
 
@@ -31,7 +31,6 @@ cookie非常小，它的大小限制为4KB左右。它的主要用途有保存�
  * cookie的封装
 
  ```
-
 const cookie = {
     get: function(key) {
         if (document.cookie) { //判断是否有cookie
@@ -58,13 +57,11 @@ const cookie = {
         this.set(key, "", -1);
     }
 }
-
  ```
 
  * vue中使用vue-cookies插件对cookie进行封装
 
  ```
-
 // 运行npm i vue-cookies -S安装插件
 import vueCookie from 'vue-cookies'
 
@@ -92,13 +89,11 @@ const CK = {
         return vueCookie.keys() // array
     }
 }
-
  ```
 
  * localStorage的封装
 
  ```
-
 class Storage {
     constructor(props) {
         this.props = props || {}
@@ -172,5 +167,4 @@ class Storage {
         return value
     }
 }
-
  ```
