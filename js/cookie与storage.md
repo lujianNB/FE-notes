@@ -3,8 +3,10 @@
  * @LastEditors: 卢建
  * @Description: cookie与storage的区别与用法
  * @Date: 2021-02-01 14:10:06
- * @LastEditTime: 2021-02-01 14:46:26
+ * @LastEditTime: 2021-02-01 14:54:41
 -->
+# cookie与storage的区别与用法
+
 * cookie
 
 cookie非常小，它的大小限制为4KB左右。它的主要用途有保存登录信息，比如你登录某个网站市场可以看到“记住密码”，这通常就是通过在 Cookie 中存入一段辨别用户身份的数据来实现的。
