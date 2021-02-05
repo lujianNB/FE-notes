@@ -3,7 +3,7 @@
  * @LastEditors: 卢建
  * @Description: 虚拟dom和diff算法
  * @Date: 2021-02-05 09:19:12
- * @LastEditTime: 2021-02-05 13:55:26
+ * @LastEditTime: 2021-02-05 16:22:29
 -->
 # 虚拟dom和diff算法
 
@@ -97,4 +97,4 @@ export default class VNode {
 
 流程图如下：
 
-<img src="../img/diff算法.png"></img>
+<img src="../img/diff.png"></img>
