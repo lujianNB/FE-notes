@@ -51,8 +51,9 @@ const http = axios.create({
 http.interceptors.request.use(
     config => {
         // 在发送请求之前做些什么
-
-        const defaultParams = {
+        // const token = utils.LS.get('token')
+        // token && (config.headers.Authorization = 'Bearer ' + token);
+        const defaultParams = { // 公共参数
             web_access: 'webqSoiKwpWVge4TkaryH6MKvOdceGt7ZMaF20g8H0cnXIweb',
             token: 'kj6tFXDccchnhEqjjQRyyJwVBjXyNgG2GpMVEqYkSeM9E56NbvpG',
         }
@@ -84,8 +85,12 @@ http.interceptors.response.use(
             if (code !== 0) {
                 noErrorMessage || _Message({
                     message: msg,
-                    type: 'warning'
+                    type: 'error'
                 })
+                // if (code === 10001) { // 退出登录
+                //     utils.LS.remove("token");
+                //     window.location = '/login'
+                // }
                 return Promise.reject(data)
             }
 
