@@ -545,8 +545,9 @@ const http = axios.create({
 http.interceptors.request.use(
     config =&gt; {
         // &#x5728;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x4E4B;&#x524D;&#x505A;&#x4E9B;&#x4EC0;&#x4E48;
-
-        const defaultParams = {
+        // const token = utils.LS.get(&apos;token&apos;)
+        // token &amp;&amp; (config.headers.Authorization = &apos;Bearer &apos; + token);
+        const defaultParams = { // &#x516C;&#x5171;&#x53C2;&#x6570;
             web_access: &apos;webqSoiKwpWVge4TkaryH6MKvOdceGt7ZMaF20g8H0cnXIweb&apos;,
             token: &apos;kj6tFXDccchnhEqjjQRyyJwVBjXyNgG2GpMVEqYkSeM9E56NbvpG&apos;,
         }
@@ -578,8 +579,12 @@ http.interceptors.response.use(
             if (code !== 0) {
                 noErrorMessage || _Message({
                     message: msg,
-                    type: &apos;warning&apos;
+                    type: &apos;error&apos;
                 })
+                // if (code === 10001) { // &#x9000;&#x51FA;&#x767B;&#x5F55;
+                //     utils.LS.remove(&quot;token&quot;);
+                //     window.location = &apos;/login&apos;
+                // }
                 return Promise.reject(data)
             }
 
@@ -680,7 +685,7 @@ export default function (config) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"axios封装","level":"1.2.1","depth":2,"next":{"title":"css样式重置","level":"1.2.2","depth":2,"path":"封装好的文件/css样式重置.md","ref":"封装好的文件/css样式重置.md","articles":[]},"previous":{"title":"封装好的文件","level":"1.2","depth":1,"ref":"","articles":[{"title":"axios封装","level":"1.2.1","depth":2,"path":"封装好的文件/axios封装.md","ref":"封装好的文件/axios封装.md","articles":[]},{"title":"css样式重置","level":"1.2.2","depth":2,"path":"封装好的文件/css样式重置.md","ref":"封装好的文件/css样式重置.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"封装好的文件/axios封装.md","mtime":"2021-04-07T06:48:33.145Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-07T06:48:59.189Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"axios封装","level":"1.2.1","depth":2,"next":{"title":"css样式重置","level":"1.2.2","depth":2,"path":"封装好的文件/css样式重置.md","ref":"封装好的文件/css样式重置.md","articles":[]},"previous":{"title":"封装好的文件","level":"1.2","depth":1,"ref":"","articles":[{"title":"axios封装","level":"1.2.1","depth":2,"path":"封装好的文件/axios封装.md","ref":"封装好的文件/axios封装.md","articles":[]},{"title":"css样式重置","level":"1.2.2","depth":2,"path":"封装好的文件/css样式重置.md","ref":"封装好的文件/css样式重置.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"封装好的文件/axios封装.md","mtime":"2021-04-07T08:14:01.312Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-07T08:18:03.913Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
