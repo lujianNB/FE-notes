@@ -1,0 +1,911 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>vue与elementui实现递归组件菜单 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="vue路由实现原理.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    封装好的文件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../封装好的文件/axios封装.html">
+            
+                <a href="../封装好的文件/axios封装.html">
+            
+                    
+                    axios封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../封装好的文件/css样式重置.html">
+            
+                <a href="../封装好的文件/css样式重置.html">
+            
+                    
+                    css样式重置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    设计模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../设计模式/代理模式.html">
+            
+                <a href="../设计模式/代理模式.html">
+            
+                    
+                    代理模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../设计模式/设计模式六大原则.html">
+            
+                <a href="../设计模式/设计模式六大原则.html">
+            
+                    
+                    设计模式六大原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../设计模式/职责链模式.html">
+            
+                <a href="../设计模式/职责链模式.html">
+            
+                    
+                    职责链模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    项目中遇到的问题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../项目中遇到的问题/数字精准度问题.html">
+            
+                <a href="../项目中遇到的问题/数字精准度问题.html">
+            
+                    
+                    数字精准度问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../项目中遇到的问题/ie对于打印时的问题.html">
+            
+                <a href="../项目中遇到的问题/ie对于打印时的问题.html">
+            
+                    
+                    ie对于打印时的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../项目中遇到的问题/ie浏览器使用elementui弹窗遮罩层在最外层.html">
+            
+                <a href="../项目中遇到的问题/ie浏览器使用elementui弹窗遮罩层在最外层.html">
+            
+                    
+                    ie浏览器使用elementui弹窗遮罩层在最外层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../项目中遇到的问题/vue使用elementui表格布局问题.html">
+            
+                <a href="../项目中遇到的问题/vue使用elementui表格布局问题.html">
+            
+                    
+                    vue使用elementui表格布局问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../项目中遇到的问题/vue中使用elementui表格动态合并数据.html">
+            
+                <a href="../项目中遇到的问题/vue中使用elementui表格动态合并数据.html">
+            
+                    
+                    vue中使用elementui表格动态合并数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    js
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../js/深拷贝与浅拷贝.html">
+            
+                <a href="../js/深拷贝与浅拷贝.html">
+            
+                    
+                    深拷贝与浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../js/事件监听对象.html">
+            
+                <a href="../js/事件监听对象.html">
+            
+                    
+                    事件监听对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../js/cookie与storage.html">
+            
+                <a href="../js/cookie与storage.html">
+            
+                    
+                    cookie与storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../js/es11新增.html">
+            
+                <a href="../js/es11新增.html">
+            
+                    
+                    es11新增
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    vue
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="路由导航守卫.html">
+            
+                <a href="路由导航守卫.html">
+            
+                    
+                    路由导航守卫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="虚拟dom和diff算法.html">
+            
+                <a href="虚拟dom和diff算法.html">
+            
+                    
+                    虚拟dom与diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="vue路由实现原理.html">
+            
+                <a href="vue路由实现原理.html">
+            
+                    
+                    vue路由实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.4" data-path="vue与elementui实现递归组件菜单.html">
+            
+                <a href="vue与elementui实现递归组件菜单.html">
+            
+                    
+                    vue与elementui实现递归组件菜单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    html
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    css
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >vue与elementui实现递归组件菜单</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!--
+ * @Autor: 卢建
+ * @LastEditors: 卢建
+ * @Description: vue与elementui实现递归组件菜单
+ * @Date: 2021-02-25 10:04:52
+ * @LastEditTime: 2021-02-25 10:24:48
+-->
+<h1 id="vue&#x4E0E;elementui&#x5B9E;&#x73B0;&#x9012;&#x5F52;&#x7EC4;&#x4EF6;&#x83DC;&#x5355;">vue&#x4E0E;elementui&#x5B9E;&#x73B0;&#x9012;&#x5F52;&#x7EC4;&#x4EF6;&#x83DC;&#x5355;</h1>
+<p>&#x4E3B;&#x8981;&#x8BB2;&#x5982;&#x4F55;&#x4F7F;&#x7528;vue&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x9012;&#x5F52;&#x7EC4;&#x4EF6;&#xFF0C;&#x4E00;&#x822C;&#x8FD9;&#x79CD;&#x7EC4;&#x4EF6;&#xFF0C;&#x591A;&#x7528;&#x4E8E;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x5BFC;&#x822A;&#x83DC;&#x5355;&#x3002;&#x9012;&#x5F52;&#x7684;&#x4E3B;&#x8981;&#x601D;&#x60F3;&#x5C31;&#x662F;&#x81EA;&#x5DF1;&#x8C03;&#x7528;&#x81EA;&#x5DF1;&#xFF0C;&#x7136;&#x540E;&#x6709;&#x7ED3;&#x675F;&#x6761;&#x4EF6;&#x3002;&#x9012;&#x5F52;&#x7EC4;&#x4EF6;&#x4E5F;&#x662F;&#x4E00;&#x6837;&#xFF0C;&#x5728;&#x7EC4;&#x5EFA;&#x5185;&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#xFF08;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x4E00;&#x4E2A;name&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x76F8;&#x5F53;&#x4E8E;&#x7EC4;&#x4EF6;&#x7684;&#x6807;&#x8BC6;&#xFF0C;&#x81EA;&#x5DF1;&#x8C03;&#x7528;&#x81EA;&#x5DF1;&#x5C31;&#x7528;&#x7684;&#x8FD9;&#x4E2A;&#xFF0C;&#x5176;&#x5B9E;keep-alive&#x7528;&#x5230;&#x7684;exclude&#x7B49;&#x4E5F;&#x662F;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x800C;&#x4E0D;&#x662F;&#x8DEF;&#x7531;&#x91CC;&#x9762;&#x7684;name&#x3002;&#xFF09;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x6211;&#x5199;&#x7684;&#x4E00;&#x4E2A;&#x9012;&#x5F52;&#x7684;&#x5BFC;&#x822A;&#x83DC;&#x5355;&#xFF0C;&#x6BD5;&#x7ADF;&#x770B;&#x4EE3;&#x7801;&#x5B9E;&#x4F8B;&#x6765;&#x7684;&#x66F4;&#x6E05;&#x6670;&#x70B9;&#x3002;</p>
+<ul>
+<li>&#x4E3B;&#x83DC;&#x5355;</li>
+</ul>
+<pre><code>&lt;!--
+ * @Autor: &#x5362;&#x5EFA;
+ * @LastEditors: &#x5362;&#x5EFA;
+ * @Description: &#x83DC;&#x5355;
+ * @Date: 2020-11-23 16:40:33
+ * @LastEditTime: 2021-02-25 10:20:29
+--&gt;
+&lt;template&gt;
+  &lt;div class=&quot;lj-left-menu&quot;&gt;
+    &lt;el-menu
+      :default-active=&quot;activeIndex&quot;
+      class=&quot;el-menu-vertical-demo&quot;
+      background-color=&quot;#242F4B&quot;
+      text-color=&quot;#D2D5DE&quot;
+      active-text-color=&quot;#468FFE&quot;
+      ref=&quot;activeIndex&quot;
+    &gt;
+      &lt;menu-item :menuData=&quot;menuData&quot;&gt;&lt;/menu-item&gt;
+    &lt;/el-menu&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import menuItem from &quot;./menuItem&quot;;
+export default {
+  name: &quot;leftMenu&quot;,
+
+  components: {
+    menuItem,
+  },
+
+  data() {
+    return {
+      activeIndex: null, // &#x5F53;&#x524D;&#x5C55;&#x5F00;&#x83DC;&#x5355;
+      menuData: [
+        {
+          id: &quot;0&quot;,
+          title: &quot;&#x9996;&#x9875;&quot;,
+          router: &quot;/home&quot;,
+          icon: &quot;el-icon-s-home&quot;,
+          children: [],
+        },
+        {
+          id: &quot;1&quot;,
+          title: &quot;&#x5DE1;&#x68C0;&quot;,
+          icon: &quot;el-icon-place&quot;,
+          router: &quot;/home&quot;,
+          children: [
+            {
+              id: &quot;1-0&quot;,
+              title: &quot;&#x667A;&#x80FD;&#x5DE1;&#x68C0;&#x8BBE;&#x7F6E;&quot;,
+              icon: &quot;&quot;,
+              router: &quot;/home&quot;,
+              children: [],
+            },
+            {
+              id: &quot;1-1&quot;,
+              title: &quot;&#x5DE1;&#x68C0;&#x8BB0;&#x5F55;&quot;,
+              icon: &quot;&quot;,
+              router: &quot;/home&quot;,
+              children: [],
+            },
+            {
+              id: &quot;1-2&quot;,
+              title: &quot;&#x4EBA;&#x5DE5;&#x5DE1;&#x68C0;&#x4EFB;&#x52A1;&quot;,
+              icon: &quot;&quot;,
+              router: &quot;/home&quot;,
+              children: [],
+            },
+            {
+              id: &quot;1-3&quot;,
+              title: &quot;&#x6545;&#x969C;&#x7EF4;&#x4FEE;&quot;,
+              icon: &quot;&quot;,
+              router: &quot;/home&quot;,
+              children: [],
+            },
+            {
+              id: &quot;1-4&quot;,
+              title: &quot;&#x4FDD;&#x517B;&#x7EF4;&#x62A4;&#x4EFB;&#x52A1;&quot;,
+              icon: &quot;&quot;,
+              router: &quot;/home&quot;,
+              children: [],
+            },
+          ],
+        },
+        {
+          id: &quot;2&quot;,
+          title: &quot;&#x8BBE;&#x5907;&#x7BA1;&#x7406;&quot;,
+          icon: &quot;el-icon-s-management&quot;,
+          router: &quot;&quot;,
+          children: [
+            {
+              id: &quot;2-0&quot;,
+              title: &quot;&#x8BBE;&#x5907;&#x7BA1;&#x7406;&quot;,
+              icon: &quot;&quot;,
+              router: &quot;/home&quot;,
+              children: [],
+            },
+            {
+              id: &quot;2-1&quot;,
+              title: &quot;&#x8BBE;&#x5907;&#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&#x7406;&quot;,
+              icon: &quot;&quot;,
+              router: &quot;/home&quot;,
+              children: [],
+            },
+          ],
+        },
+        {
+          id: &quot;3&quot;,
+          title: &quot;&#x544A;&#x8B66;&#x7BA1;&#x7406;&quot;,
+          icon: &quot;el-icon-sunrise&quot;,
+          router: &quot;/home&quot;,
+          children: [
+            {
+              id: &quot;3-0&quot;,
+              title: &quot;&#x5DE1;&#x68C0;&#x544A;&#x8B66;&quot;,
+              icon: &quot;&quot;,
+              router: &quot;/home&quot;,
+              children: [],
+            },
+          ],
+        },
+        {
+          id: &quot;4&quot;,
+          title: &quot;&#x6D88;&#x606F;&#x4E2D;&#x5FC3;&quot;,
+          icon: &quot;el-icon-chat-dot-square&quot;,
+          router: &quot;/home&quot;,
+          children: [
+            {
+              id: &quot;4-0&quot;,
+              title: &quot;&#x6D88;&#x606F;&#x5217;&#x8868;&quot;,
+              icon: &quot;&quot;,
+              router: &quot;/home&quot;,
+              children: [],
+            },
+          ],
+        },
+        {
+          id: &quot;5&quot;,
+          title: &quot;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&quot;,
+          icon: &quot;el-icon-setting&quot;,
+          router: &quot;/home&quot;,
+          children: [
+            {
+              id: &quot;5-0&quot;,
+              title: &quot;&#x7528;&#x6237;&#x7BA1;&#x7406;&quot;,
+              icon: &quot;&quot;,
+              router: &quot;/home&quot;,
+              children: [
+                {
+                  id: &quot;5-0-1&quot;,
+                  title: &quot;&#x6743;&#x9650;&#x7BA1;&#x7406;&quot;,
+                  icon: &quot;&quot;,
+                  router: &quot;/home&quot;,
+                  children: [],
+                },
+              ],
+            },
+            {
+              id: &quot;5-1&quot;,
+              title: &quot;&#x89D2;&#x8272;&#x7BA1;&#x7406;&quot;,
+              icon: &quot;&quot;,
+              router: &quot;/home&quot;,
+              children: [],
+            },
+            {
+              id: &quot;5-2&quot;,
+              title: &quot;&#x6743;&#x9650;&#x7BA1;&#x7406;&quot;,
+              icon: &quot;&quot;,
+              router: &quot;/home&quot;,
+              children: [],
+            },
+          ],
+        },
+      ],
+    };
+  },
+
+  computed: {},
+
+  mounted() {},
+
+  methods: {},
+
+  watch: {
+    $route: { // &#x76D1;&#x542C;&#x8DEF;&#x7531;&#xFF0C;&#x786E;&#x4FDD;&#x5237;&#x65B0;&#x540E;&#x5F53;&#x524D;&#x9875;&#x9762;&#x4E0E;&#x5BFC;&#x822A;&#x72B6;&#x6001;&#x4E00;&#x81F4;&#x3002;
+      handler(val) {
+        this.activeIndex = val.meta.id;
+      },
+      deep: true,
+      immediate: true,
+    },
+  },
+};
+&lt;/script&gt;
+
+&lt;style lang=&apos;scss&apos; scoped&gt;
+.lj-left-menu {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+&lt;/style&gt;
+</code></pre><ul>
+<li>&#x9012;&#x5F52;&#x7EC4;&#x4EF6;</li>
+</ul>
+<pre><code>&lt;!--
+ * @Autor: &#x5362;&#x5EFA;
+ * @LastEditors: &#x5362;&#x5EFA;
+ * @Description: &#x9012;&#x5F52;&#x83DC;&#x5355;
+ * @Date: 2021-02-24 16:58:17
+ * @LastEditTime: 2021-02-24 17:16:13
+--&gt;
+&lt;template&gt;
+  &lt;div class=&quot;lj-menu-item&quot;&gt;
+    &lt;template v-for=&quot;item in menuData&quot;&gt;
+      &lt;template v-if=&quot;item.children.length&quot;&gt;
+        &lt;el-submenu :index=&quot;item.id&quot; :key=&quot;item.id&quot;&gt;
+          &lt;template slot=&quot;title&quot;&gt;
+            &lt;template v-if=&quot;item.icon&quot;&gt;
+              &lt;i :class=&quot;item.icon&quot;&gt;&lt;/i&gt;
+              &lt;span&gt;&lt;/span&gt;
+            &lt;/template&gt;
+            &lt;template v-else&gt;
+              &lt;div class=&quot;radius&quot;&gt;&lt;/div&gt;
+              &lt;div&gt;&lt;/div&gt;
+            &lt;/template&gt;
+          &lt;/template&gt;
+          &lt;menu-item :menuData=&quot;item.children&quot;&gt;&lt;/menu-item&gt;
+        &lt;/el-submenu&gt;
+      &lt;/template&gt;
+      &lt;template v-else&gt;
+        &lt;el-menu-item
+          :index=&quot;item.id&quot;
+          :key=&quot;item.id&quot;
+          @click=&quot;goRouter(item.router)&quot;
+        &gt;
+          &lt;template v-if=&quot;item.icon&quot;&gt;
+            &lt;i :class=&quot;item.icon&quot;&gt;&lt;/i&gt;
+            &lt;span&gt;&lt;/span&gt;
+          &lt;/template&gt;
+          &lt;template v-else&gt;
+            &lt;div class=&quot;radius&quot;&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;/div&gt;
+          &lt;/template&gt;
+        &lt;/el-menu-item&gt;
+      &lt;/template&gt;
+    &lt;/template&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: &quot;menuItem&quot;,
+
+  data() {
+    return {
+      nowRouter: null,
+    };
+  },
+
+  props: {
+    menuData: {
+      type: Array,
+      default: () =&gt; {},
+    },
+  },
+
+  computed: {},
+
+  mounted() {
+    this.nowRouter = this.$route.path;
+  },
+
+  methods: {
+    // &#x8DEF;&#x7531;&#x8DF3;&#x8F6C;
+    goRouter(data) {
+      if (this.nowRouter === data) {
+        return;
+      } else {
+        this.nowRouter = data;
+        this.$router.push(data);
+      }
+    },
+  },
+};
+&lt;/script&gt;
+
+&lt;style lang=&quot;scss&quot;&gt;
+.el-menu-item.is-active {
+  background: linear-gradient(90deg, #2b579c 0%, rgba(52, 89, 150, 0) 100%);
+  border-left: 2px solid #0086ff;
+}
+.el-menu-item:focus,
+.el-menu-item:hover {
+  background: linear-gradient(90deg, #2b579c 0%, rgba(52, 89, 150, 0) 100%);
+  border-left: 2px solid #0086ff;
+}
+.el-submenu__title {
+  i {
+    color: #00d7ff !important;
+  }
+}
+.el-menu-item,
+.el-submenu__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .radius {
+    width: 8px;
+    height: 8px;
+    background: #468ffe;
+    opacity: 0.6;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  i {
+    color: #00d7ff !important;
+  }
+}
+&lt;/style&gt;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="vue路由实现原理.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: vue路由实现原理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"vue与elementui实现递归组件菜单","level":"1.6.4","depth":2,"next":{"title":"html","level":"1.7","depth":1,"ref":"","articles":[]},"previous":{"title":"vue路由实现原理","level":"1.6.3","depth":2,"path":"vue/vue路由实现原理.md","ref":"vue/vue路由实现原理.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vue与elementui实现递归组件菜单.md","mtime":"2021-04-07T06:48:33.143Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-07T06:48:59.189Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
