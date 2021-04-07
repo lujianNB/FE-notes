@@ -72,13 +72,11 @@
         >
         </el-table-column>
         <el-table-column
+          prop="desc"
           label="热耗率影响"
           align="center"
           header-align="center"
         >
-          <template slot-scope="scope">
-            <span>{{ scope.row.desc || "-" }}</span>
-          </template>
         </el-table-column>
         <el-table-column label="操作" align="center" header-align="center">
           <template>
