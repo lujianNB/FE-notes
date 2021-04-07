@@ -26,5 +26,7 @@ gitbook init
 
 运行
 ```
-gitbook serve
+gitbook serve或者build
 ```
+
+将生成的_book文件夹里的内容放到gh-pages分支根目录下，就可以访问了，如果重定向的话需要有自己的域名，在该分支的settings里配置域名并且设置好域名解析。
