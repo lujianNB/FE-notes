@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>代理模式 · GitBook</title>
+        <title>电子书 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -56,8 +56,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
-    
-    <link rel="next" href="设计模式六大原则.html" />
     
     
 
@@ -114,9 +112,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../电子书/电子书.html">
+        <li class="chapter active" data-level="1.2.1" data-path="电子书.html">
             
-                <a href="../电子书/电子书.html">
+                <a href="电子书.html">
             
                     
                     电子书
@@ -191,9 +189,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="代理模式.html">
+        <li class="chapter " data-level="1.4.1" data-path="../设计模式/代理模式.html">
             
-                <a href="代理模式.html">
+                <a href="../设计模式/代理模式.html">
             
                     
                     代理模式
@@ -204,9 +202,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="设计模式六大原则.html">
+        <li class="chapter " data-level="1.4.2" data-path="../设计模式/设计模式六大原则.html">
             
-                <a href="设计模式六大原则.html">
+                <a href="../设计模式/设计模式六大原则.html">
             
                     
                     设计模式六大原则
@@ -217,9 +215,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="职责链模式.html">
+        <li class="chapter " data-level="1.4.3" data-path="../设计模式/职责链模式.html">
             
-                <a href="职责链模式.html">
+                <a href="../设计模式/职责链模式.html">
             
                     
                     职责链模式
@@ -517,7 +515,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >代理模式</a>
+        <a href=".." >电子书</a>
     </h1>
 </div>
 
@@ -535,63 +533,22 @@
                                 <!--
  * @Autor: 卢建
  * @LastEditors: 卢建
- * @Description: 代理模式
- * @Date: 2021-02-19 14:08:29
- * @LastEditTime: 2021-02-20 10:45:03
+ * @Description: 电子书
+ * @Date: 2021-02-02 09:40:16
+ * @LastEditTime: 2021-04-07 16:34:31
 -->
-<h1 id="&#x4EE3;&#x7406;&#x6A21;&#x5F0F;">&#x4EE3;&#x7406;&#x6A21;&#x5F0F;</h1>
-<p>&#x4E3A;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x4EE3;&#x7528;&#x54C1;&#x6216;&#x5360;&#x4F4D;&#x7B26;&#xFF0C;&#x4EE5;&#x4FBF;&#x63A7;&#x5236;&#x5BF9;&#x5B83;&#x7684;&#x8BBF;&#x95EE;</p>
-<ul>
-<li>&#x865A;&#x62DF;&#x4EE3;&#x7406;</li>
-</ul>
-<pre><code>//&#x771F;&#x6B63;&#x7684;&#x56FE;&#x7247;
-let myImage = (function () {
-    let imgNode = document.createElement(&apos;img&apos;);
-    document.body.appendChild(imgNode);
-    return {
-        setSrc: function (src) {
-            imgNode.src = src;
-        }
-    }
-})();
-//&#x56FE;&#x7247;&#x4EE3;&#x7406;
-let proxyImage = (function () {
-    let img = new Image;
-    img.onload = function () {
-        myImage.setSrc(this.src);
-    }
-    return {
-        setSrc: function (src) {
-            myImage.setSrc(&apos;./loading.svg&apos;);
-            img.src = src;
-        }
-    }
-})();
-proxyImage.setSrc(&apos;http://www.cdhrsip.com/static/imgs/high-tech/banner.png?version=201512141756&apos;);
-</code></pre><ul>
-<li>&#x7F13;&#x5B58;&#x4EE3;&#x7406;</li>
-</ul>
-<pre><code>let mult = function () {
-    console.log(&apos;&#x5F00;&#x59CB;&#x8BA1;&#x7B97;&#x4E58;&#x79EF;&apos;);
-    let a = 1;
-    for (let i = 0, l = arguments.length; i &lt; l; i++) {
-        a = a * arguments[i];
-    }
-    return a;
-};
-let proxyMult = (function () {
-    let cache = {};
-    return function () {
-        let args = Array.prototype.join.call(arguments, &apos;,&apos;);
-        if (args in cache) {
-            return cache[args];
-        }
-        return cache[args] = mult.apply(this, arguments);
-    }
-})();
-console.log(proxyMult(1, 2, 3, 4)); // &#x8F93;&#x51FA;&#xFF1A;24
-console.log(proxyMult(1, 2, 3, 4)); // &#x8F93;&#x51FA;&#xFF1A;24
-</code></pre>
+<h1 id="&#x7535;&#x5B50;&#x4E66;&#x64CD;&#x4F5C;">&#x7535;&#x5B50;&#x4E66;&#x64CD;&#x4F5C;</h1>
+<pre><code>npm i -g gitbook-cli
+</code></pre><pre><code>gitbook init
+</code></pre><p>&#x8FD9;&#x4E00;&#x6B65;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x62A5;&#x9519;&#x3002;&#x8BF4;&#x627E;&#x4E0D;&#x5230;apply&#x51FD;&#x6570;&#xFF0C;&#x6839;&#x636E;&#x9519;&#x8BEF;&#x6CE8;&#x91CA;&#x6389;&#x6587;&#x4EF6;&#x91CC;&#x7684;&#x4EE3;&#x7801;&#x5C31;&#x884C;&#xFF0C;&#x90A3;&#x662F;&#x517C;&#x5BB9;&#x4F4E;&#x7248;&#x672C;&#x7684;&#x3002;</p>
+<p><strong>&#x751F;&#x6210;SUMMARY.md&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5C31;&#x662F;&#x83DC;&#x5355;&#x76EE;&#x5F55;</strong></p>
+<p>&#x8FD0;&#x884C;</p>
+<pre><code>gitbook serve&#x6216;&#x8005;build
+</code></pre><p>&#x5C06;&#x751F;&#x6210;&#x7684;_book&#x6587;&#x4EF6;&#x5939;&#x91CC;&#x7684;&#x5185;&#x5BB9;&#x653E;&#x5230;gh-pages&#x5206;&#x652F;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x4E86;&#x3002;</p>
+<pre><code>// &#x6E05;&#x7A7A;gh-pages&#x5206;&#x652F;&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;
+cp -r _book/* .
+</code></pre><p>&#x5982;&#x679C;&#x91CD;&#x5B9A;&#x5411;&#x7684;&#x8BDD;&#x9700;&#x8981;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x5728;&#x8BE5;&#x5206;&#x652F;&#x7684;settings&#x91CC;&#x914D;&#x7F6E;&#x57DF;&#x540D;&#x5E76;&#x4E14;&#x8BBE;&#x7F6E;&#x597D;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x3002;</p>
+
                                 
                                 </section>
                             
@@ -619,10 +576,6 @@ console.log(proxyMult(1, 2, 3, 4)); // &#x8F93;&#x51FA;&#xFF1A;24
             
                 
                 
-                <a href="设计模式六大原则.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 设计模式六大原则">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
             
         
     </div>
@@ -630,7 +583,7 @@ console.log(proxyMult(1, 2, 3, 4)); // &#x8F93;&#x51FA;&#xFF1A;24
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"代理模式","level":"1.4.1","depth":2,"next":{"title":"设计模式六大原则","level":"1.4.2","depth":2,"path":"设计模式/设计模式六大原则.md","ref":"设计模式/设计模式六大原则.md","articles":[]},"previous":{"title":"设计模式","level":"1.4","depth":1,"ref":"","articles":[{"title":"代理模式","level":"1.4.1","depth":2,"path":"设计模式/代理模式.md","ref":"设计模式/代理模式.md","articles":[]},{"title":"设计模式六大原则","level":"1.4.2","depth":2,"path":"设计模式/设计模式六大原则.md","ref":"设计模式/设计模式六大原则.md","articles":[]},{"title":"职责链模式","level":"1.4.3","depth":2,"path":"设计模式/职责链模式.md","ref":"设计模式/职责链模式.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"设计模式/代理模式.md","mtime":"2021-04-07T08:19:01.294Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-07T08:41:02.318Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"电子书","level":"1.2.1","depth":2,"next":{"title":"封装好的文件","level":"1.3","depth":1,"ref":"","articles":[{"title":"axios封装","level":"1.3.1","depth":2,"path":"封装好的文件/axios封装.md","ref":"封装好的文件/axios封装.md","articles":[]},{"title":"css样式重置","level":"1.3.2","depth":2,"path":"封装好的文件/css样式重置.md","ref":"封装好的文件/css样式重置.md","articles":[]}]},"previous":{"title":"电子书","level":"1.2","depth":1,"ref":"","articles":[{"title":"电子书","level":"1.2.1","depth":2,"path":"电子书/电子书.md","ref":"电子书/电子书.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"电子书/电子书.md","mtime":"2021-04-07T08:36:23.392Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-07T08:41:02.318Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
