@@ -69,7 +69,7 @@
         "change_girls": {
             "time": 5,
             "urls": [
-                "img/bg-one.jpg", "img/bg-two.jpg", "img/bg-three.jpg", "img/bg-four.jpg", "img/bg-five.jpg"
+                "https://github.com/lujianNB/FE-notes/blob/master/img/bg-one.jpg", "https://github.com/lujianNB/FE-notes/blob/master/img/bg-two.jpg", "https://github.com/lujianNB/FE-notes/blob/master/img/bg-three.jpg", "https://github.com/lujianNB/FE-notes/blob/master/img/bg-four.jpg", "https://github.com/lujianNB/FE-notes/blob/master/img/bg-five.jpg"
             ]
         }
     }
