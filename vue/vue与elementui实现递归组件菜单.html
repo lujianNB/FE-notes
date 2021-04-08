@@ -17,11 +17,51 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-change_girls/girls.css">
                 
             
                 
@@ -532,41 +572,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <!--
- * @Autor: 卢建
- * @LastEditors: 卢建
- * @Description: vue与elementui实现递归组件菜单
- * @Date: 2021-02-25 10:04:52
- * @LastEditTime: 2021-02-25 10:24:48
--->
-<h1 id="vue&#x4E0E;elementui&#x5B9E;&#x73B0;&#x9012;&#x5F52;&#x7EC4;&#x4EF6;&#x83DC;&#x5355;">vue&#x4E0E;elementui&#x5B9E;&#x73B0;&#x9012;&#x5F52;&#x7EC4;&#x4EF6;&#x83DC;&#x5355;</h1>
+                                <h1 id="vue&#x4E0E;elementui&#x5B9E;&#x73B0;&#x9012;&#x5F52;&#x7EC4;&#x4EF6;&#x83DC;&#x5355;">vue&#x4E0E;elementui&#x5B9E;&#x73B0;&#x9012;&#x5F52;&#x7EC4;&#x4EF6;&#x83DC;&#x5355;</h1>
 <p>&#x4E3B;&#x8981;&#x8BB2;&#x5982;&#x4F55;&#x4F7F;&#x7528;vue&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x9012;&#x5F52;&#x7EC4;&#x4EF6;&#xFF0C;&#x4E00;&#x822C;&#x8FD9;&#x79CD;&#x7EC4;&#x4EF6;&#xFF0C;&#x591A;&#x7528;&#x4E8E;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x5BFC;&#x822A;&#x83DC;&#x5355;&#x3002;&#x9012;&#x5F52;&#x7684;&#x4E3B;&#x8981;&#x601D;&#x60F3;&#x5C31;&#x662F;&#x81EA;&#x5DF1;&#x8C03;&#x7528;&#x81EA;&#x5DF1;&#xFF0C;&#x7136;&#x540E;&#x6709;&#x7ED3;&#x675F;&#x6761;&#x4EF6;&#x3002;&#x9012;&#x5F52;&#x7EC4;&#x4EF6;&#x4E5F;&#x662F;&#x4E00;&#x6837;&#xFF0C;&#x5728;&#x7EC4;&#x5EFA;&#x5185;&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#xFF08;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x4E00;&#x4E2A;name&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x76F8;&#x5F53;&#x4E8E;&#x7EC4;&#x4EF6;&#x7684;&#x6807;&#x8BC6;&#xFF0C;&#x81EA;&#x5DF1;&#x8C03;&#x7528;&#x81EA;&#x5DF1;&#x5C31;&#x7528;&#x7684;&#x8FD9;&#x4E2A;&#xFF0C;&#x5176;&#x5B9E;keep-alive&#x7528;&#x5230;&#x7684;exclude&#x7B49;&#x4E5F;&#x662F;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x800C;&#x4E0D;&#x662F;&#x8DEF;&#x7531;&#x91CC;&#x9762;&#x7684;name&#x3002;&#xFF09;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x6211;&#x5199;&#x7684;&#x4E00;&#x4E2A;&#x9012;&#x5F52;&#x7684;&#x5BFC;&#x822A;&#x83DC;&#x5355;&#xFF0C;&#x6BD5;&#x7ADF;&#x770B;&#x4EE3;&#x7801;&#x5B9E;&#x4F8B;&#x6765;&#x7684;&#x66F4;&#x6E05;&#x6670;&#x70B9;&#x3002;</p>
 <ul>
 <li>&#x4E3B;&#x83DC;&#x5355;</li>
 </ul>
-<pre><code>&lt;!--
+<pre class="language-"><code><span class="token comment">&lt;!--
  * @Autor: &#x5362;&#x5EFA;
  * @LastEditors: &#x5362;&#x5EFA;
  * @Description: &#x83DC;&#x5355;
  * @Date: 2020-11-23 16:40:33
  * @LastEditTime: 2021-02-25 10:20:29
---&gt;
-&lt;template&gt;
-  &lt;div class=&quot;lj-left-menu&quot;&gt;
-    &lt;el-menu
-      :default-active=&quot;activeIndex&quot;
-      class=&quot;el-menu-vertical-demo&quot;
-      background-color=&quot;#242F4B&quot;
-      text-color=&quot;#D2D5DE&quot;
-      active-text-color=&quot;#468FFE&quot;
-      ref=&quot;activeIndex&quot;
-    &gt;
-      &lt;menu-item :menuData=&quot;menuData&quot;&gt;&lt;/menu-item&gt;
-    &lt;/el-menu&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>lj-left-menu<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-menu</span>
+      <span class="token attr-name">:default-active</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>activeIndex<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>el-menu-vertical-demo<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">background-color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>#242F4B<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">text-color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>#D2D5DE<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">active-text-color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>#468FFE<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>activeIndex<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>menu-item</span> <span class="token attr-name">:menuData</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>menuData<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>menu-item</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-menu</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
 
-&lt;script&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>
 import menuItem from &quot;./menuItem&quot;;
 export default {
   name: &quot;leftMenu&quot;,
@@ -738,64 +771,64 @@ export default {
     },
   },
 };
-&lt;/script&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 
-&lt;style lang=&apos;scss&apos; scoped&gt;
-.lj-left-menu {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-&lt;/style&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&apos;</span>scss<span class="token punctuation">&apos;</span></span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.lj-left-menu</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
 </code></pre><ul>
 <li>&#x9012;&#x5F52;&#x7EC4;&#x4EF6;</li>
 </ul>
-<pre><code>&lt;!--
+<pre class="language-"><code><span class="token comment">&lt;!--
  * @Autor: &#x5362;&#x5EFA;
  * @LastEditors: &#x5362;&#x5EFA;
  * @Description: &#x9012;&#x5F52;&#x83DC;&#x5355;
  * @Date: 2021-02-24 16:58:17
  * @LastEditTime: 2021-02-24 17:16:13
---&gt;
-&lt;template&gt;
-  &lt;div class=&quot;lj-menu-item&quot;&gt;
-    &lt;template v-for=&quot;item in menuData&quot;&gt;
-      &lt;template v-if=&quot;item.children.length&quot;&gt;
-        &lt;el-submenu :index=&quot;item.id&quot; :key=&quot;item.id&quot;&gt;
-          &lt;template slot=&quot;title&quot;&gt;
-            &lt;template v-if=&quot;item.icon&quot;&gt;
-              &lt;i :class=&quot;item.icon&quot;&gt;&lt;/i&gt;
-              &lt;span&gt;&lt;/span&gt;
-            &lt;/template&gt;
-            &lt;template v-else&gt;
-              &lt;div class=&quot;radius&quot;&gt;&lt;/div&gt;
-              &lt;div&gt;&lt;/div&gt;
-            &lt;/template&gt;
-          &lt;/template&gt;
-          &lt;menu-item :menuData=&quot;item.children&quot;&gt;&lt;/menu-item&gt;
-        &lt;/el-submenu&gt;
-      &lt;/template&gt;
-      &lt;template v-else&gt;
-        &lt;el-menu-item
-          :index=&quot;item.id&quot;
-          :key=&quot;item.id&quot;
-          @click=&quot;goRouter(item.router)&quot;
-        &gt;
-          &lt;template v-if=&quot;item.icon&quot;&gt;
-            &lt;i :class=&quot;item.icon&quot;&gt;&lt;/i&gt;
-            &lt;span&gt;&lt;/span&gt;
-          &lt;/template&gt;
-          &lt;template v-else&gt;
-            &lt;div class=&quot;radius&quot;&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;/div&gt;
-          &lt;/template&gt;
-        &lt;/el-menu-item&gt;
-      &lt;/template&gt;
-    &lt;/template&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>lj-menu-item<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item in menuData<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.children.length<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-submenu</span> <span class="token attr-name">:index</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.id<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.id<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>title<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.icon<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">:class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.icon<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">v-else</span><span class="token punctuation">&gt;</span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>radius<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>menu-item</span> <span class="token attr-name">:menuData</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.children<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>menu-item</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-submenu</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">v-else</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-menu-item</span>
+          <span class="token attr-name">:index</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.id<span class="token punctuation">&quot;</span></span>
+          <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.id<span class="token punctuation">&quot;</span></span>
+          <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>goRouter(item.router)<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.icon<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">:class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.icon<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">v-else</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>radius<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-menu-item</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
 
-&lt;script&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>
 export default {
   name: &quot;menuItem&quot;,
 
@@ -830,42 +863,44 @@ export default {
     },
   },
 };
-&lt;/script&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 
-&lt;style lang=&quot;scss&quot;&gt;
-.el-menu-item.is-active {
-  background: linear-gradient(90deg, #2b579c 0%, rgba(52, 89, 150, 0) 100%);
-  border-left: 2px solid #0086ff;
-}
-.el-menu-item:focus,
-.el-menu-item:hover {
-  background: linear-gradient(90deg, #2b579c 0%, rgba(52, 89, 150, 0) 100%);
-  border-left: 2px solid #0086ff;
-}
-.el-submenu__title {
-  i {
-    color: #00d7ff !important;
-  }
-}
-.el-menu-item,
-.el-submenu__title {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  .radius {
-    width: 8px;
-    height: 8px;
-    background: #468ffe;
-    opacity: 0.6;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  i {
-    color: #00d7ff !important;
-  }
-}
-&lt;/style&gt;
-</code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>scss<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.el-menu-item.is-active</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>90deg<span class="token punctuation">,</span> #2b579c 0%<span class="token punctuation">,</span> <span class="token function">rgba</span><span class="token punctuation">(</span>52<span class="token punctuation">,</span> 89<span class="token punctuation">,</span> 150<span class="token punctuation">,</span> 0<span class="token punctuation">)</span> 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">border-left</span><span class="token punctuation">:</span> 2px solid #0086ff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.el-menu-item:focus,
+.el-menu-item:hover</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>90deg<span class="token punctuation">,</span> #2b579c 0%<span class="token punctuation">,</span> <span class="token function">rgba</span><span class="token punctuation">(</span>52<span class="token punctuation">,</span> 89<span class="token punctuation">,</span> 150<span class="token punctuation">,</span> 0<span class="token punctuation">)</span> 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">border-left</span><span class="token punctuation">:</span> 2px solid #0086ff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.el-submenu__title</span> <span class="token punctuation">{</span>
+  <span class="token selector">i</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #00d7ff <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.el-menu-item,
+.el-submenu__title</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> flex-start<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token selector">;
+  .radius</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 8px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 8px<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #468ffe<span class="token punctuation">;</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> 0.6<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">margin-right</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">i</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #00d7ff <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; lujiannb@qq.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-04-07 16:41:14
+</span></footer>
                                 
                                 </section>
                             
@@ -904,7 +939,7 @@ export default {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"vue与elementui实现递归组件菜单","level":"1.7.4","depth":2,"next":{"title":"html","level":"1.8","depth":1,"ref":"","articles":[]},"previous":{"title":"vue路由实现原理","level":"1.7.3","depth":2,"path":"vue/vue路由实现原理.md","ref":"vue/vue路由实现原理.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vue与elementui实现递归组件菜单.md","mtime":"2021-04-07T08:19:01.050Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-07T08:41:02.318Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"vue与elementui实现递归组件菜单","level":"1.7.4","depth":2,"next":{"title":"html","level":"1.8","depth":1,"ref":"","articles":[]},"previous":{"title":"vue路由实现原理","level":"1.7.3","depth":2,"path":"vue/vue路由实现原理.md","ref":"vue/vue路由实现原理.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","back-to-top-button","chapter-fold","splitter","lightbox","custom-favicon","tbfed-pagefooter","hide-element","-lunr","-search","-sharing","sharing-plus","search-pro","pageview-count","-highlight","prism","hide-element","code","donate","change_girls"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy lujiannb@qq.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{},"splitter":{},"change_girls":{"time":5,"urls":["img/bg-one.jpg","img/bg-two.jpg","img/bg-three.jpg","img/bg-four.jpg","img/bg-five.jpg"]},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"img/zhi-pay.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"img/wei-pay.png","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"img/user.ico","lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"pageview-count":{},"custom-favicon":{},"sharing":{"qq":false,"all":["douban","facebook","google","weibo","qq","qzone","pocket","stumbleupon","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"img/user.jpg","style":"background: none; max-height: 30px; min-height: 30px"},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vue与elementui实现递归组件菜单.md","mtime":"2021-04-07T08:41:14.460Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-08T03:18:37.869Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -914,23 +949,55 @@ export default {
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-change_girls/girls.js"></script>
         
     
         
