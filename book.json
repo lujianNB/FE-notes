@@ -17,8 +17,7 @@
         "prism",
         "hide-element",
         "code",
-        "donate",
-        "change_girls"
+        "donate"
     ],
     "pluginsConfig": {
         "favicon": "img/user.ico",
@@ -65,12 +64,6 @@
             "button": "赏",
             "alipayText": "支付宝打赏",
             "wechatText": "微信打赏"
-        },
-        "change_girls": {
-            "time": 5,
-            "urls": [
-                "https://github.com/lujianNB/FE-notes/blob/master/img/bg-one.jpg", "https://github.com/lujianNB/FE-notes/blob/master/img/bg-two.jpg", "https://github.com/lujianNB/FE-notes/blob/master/img/bg-three.jpg", "https://github.com/lujianNB/FE-notes/blob/master/img/bg-four.jpg", "https://github.com/lujianNB/FE-notes/blob/master/img/bg-five.jpg"
-            ]
         }
     }
 }
