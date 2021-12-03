@@ -23,7 +23,7 @@ npm i three three-css2drender three-obj-mtl-loader three-orbit-controls -S
  * @LastEditors: 卢建
  * @Description: 三维模型
  * @Date: 2021-12-02 13:07:09
- * @LastEditTime: 2021-12-03 14:38:04
+ * @LastEditTime: 2021-12-03 14:59:10
 -->
 <template>
   <div class="obj" @click="mouseClick"></div>
@@ -88,6 +88,7 @@ export default {
       this.light.position.set(100, 200, 100);
       this.light.position.multiplyScalar(0.3);
       this.scene.add(this.light);
+      //利用一个轴对象以可视化的3轴以简单的方式。X轴是红色的。Y轴是绿色的。Z轴是蓝色的。这有助于理解在空间的所有三个轴的方向。
       let axisHelper = new THREE.AxisHelper(20); //参数是坐标轴的长度
       this.scene.add(axisHelper);
       //初始化相机
@@ -226,3 +227,7 @@ export default {
 }
 </style>
 ```
+
+* 效果图
+
+<img src="../img/3d-model.png" alt="obj模型效果图"></img>
