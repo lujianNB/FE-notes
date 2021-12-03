@@ -3,7 +3,7 @@
  * @LastEditors: 卢建
  * @Description: vue结合three.js载入多个obj模型交互场景
  * @Date: 2021-12-03 14:41:50
- * @LastEditTime: 2021-12-03 14:41:51
+ * @LastEditTime: 2021-12-03 15:16:45
 -->
 # vue结合three.js载入多个obj模型交互场景
 
@@ -230,4 +230,4 @@ export default {
 
 * 效果图
 
-<img src="../img/3d-model.png" alt="obj模型效果图"></img>
+<img src="../img/3d-model.jpg" alt="obj模型效果图"></img>
