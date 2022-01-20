@@ -3,11 +3,11 @@
  * @LastEditors: 卢建
  * @Description: vue结合three.js载入多个obj模型交互场景
  * @Date: 2021-12-03 14:41:50
- * @LastEditTime: 2021-12-03 15:16:45
+ * @LastEditTime: 2022-01-20 15:15:09
 -->
 # vue结合three.js载入多个obj模型交互场景
 
-**应用场景是实现多个三维obj模型导入，进行拼凑，去实现模型的交互，点击，运动等**
+**应用场景是实现多个三维obj模型导入，进行拼凑，去实现模型的交互，点击，运动等，如果只是简单的建议使用vue-3d-model插件**
 
 * 安装依赖
 
@@ -113,7 +113,7 @@ export default {
       });
       let pointLight = new THREE.PointLight();
       pointLight.color.set(0xffffff);
-      pointLight.intensity = 0.8;
+      pointLight.intensity = 1;
       this.camera.add(pointLight);
       this.scene.add(this.camera);
       // this.renderer.setClearColor(0x000000);
@@ -138,7 +138,7 @@ export default {
       this.renderer.render(this.scene, this.camera);
     },
     //外部模型加载函数
-    loadObj(mtl, object, typeName) {
+    loadObj({ mtl, object, typeName }) {
       let objLoader = new OBJLoader();
       let mtlLoader = new MTLLoader();
       // let _this = this;
@@ -151,10 +151,17 @@ export default {
         objLoader.load(object, (obj) => {
           // console.log(obj);
           // obj.position.set(0, 0, 0); //模型摆放的位置
-          if (typeName === "wc") {
-            obj.rotation.set(0, Math.PI / 2, 0);
-            obj.position.set(-5, 0, 10);
-          }
+          // if (typeName === "wc") {
+          //   obj.rotation.set(0, Math.PI / 2, 0);
+          //   obj.position.set(-4.5, 0, 10);
+          // }
+          // if (typeName === "xz") {
+          //   // obj.rotation.set(0, Math.PI / 2, 0);
+          //   obj.position.set(-9, 0, -3);
+          // }
+          // if (typeName === "xb") {
+          //   obj.position.set(0, 5, 5);
+          // }
           obj.typeName = typeName;
           obj.scale.set(0.0008, 0.0008, 0.0008); //模型放大或缩小，有的时候看不到模型，考虑是不是模型太小或太大。
           this.scene.add(obj);
@@ -165,17 +172,18 @@ export default {
      * 点击事件
      */
     mouseClick(event) {
+      this.scene.children.forEach((item) => {
+        if (item.typeName === "xb") {
+          let ljaxis = new THREE.Vector3(1, 0, 0); //向量axis
+          item.rotateOnAxis(ljaxis, Math.PI / 8); //绕axis轴旋转π/8
+        }
+      });
       // 获取 raycaster 和所有模型相交的数组，其中的元素按照距离排序，越近的越靠前
       let intersects = this.getIntersects(event);
       if (intersects.length) {
         // intersects[0].object.position.x += 200;
         // intersects.forEach((item) => {
         //   item.object.position.x += 200;
-        // });
-        // this.scene.children.forEach((item) => {
-        //   if (item.typeName === "tj") {
-        //     item.position.x += 1;
-        //   }
         // });
       }
 
@@ -213,9 +221,29 @@ export default {
   mounted() {
     this.init();
     this.allObj.forEach((item) => {
-      this.loadObj(item.mtl, item.object, item.typeName);
+      this.loadObj(item);
     });
     this.animate();
+    // traverse()为three.js提供的递归遍历模型对象方法，getObjectById()、getObjectByName()也可用来查找对象
+    this.scene.traverse((obj) => {
+      if (obj.typeName === "wc") {
+        obj.rotation.set(0, Math.PI / 2, 0);
+        obj.position.set(-4.5, 0, 10);
+      }
+      if (obj.typeName === "xz") {
+        // obj.rotation.set(0, Math.PI / 2, 0);
+        obj.position.set(-9, 0, -3);
+      }
+      if (obj.typeName === "xb") {
+        obj.position.set(0, 5, 5);
+      }
+      // 打印id属性
+      console.log(obj.id);
+      // 打印该对象的父对象
+      console.log(obj.parent);
+      // 打印该对象的子对象
+      console.log(obj.children);
+    });
   },
 };
 </script>
