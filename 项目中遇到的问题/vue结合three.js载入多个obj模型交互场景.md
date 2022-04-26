@@ -3,11 +3,28 @@
  * @LastEditors: 卢建
  * @Description: vue结合three.js载入多个obj模型交互场景
  * @Date: 2021-12-03 14:41:50
- * @LastEditTime: 2022-01-20 15:15:09
+ * @LastEditTime: 2022-04-26 13:32:19
 -->
 # vue结合three.js载入多个obj模型交互场景
 
 **应用场景是实现多个三维obj模型导入，进行拼凑，去实现模型的交互，点击，运动等，如果只是简单的建议使用vue-3d-model插件**
+
+**2022.04.26新增补充踩坑点：**
+
+1.解析的时候可能出现源代码报错说什么Handlers.get()没有了，要替代，只需将three-obj-mtl-loader文件下的index.js545行“var loader = THREE.Loader.Handlers.get( url );”注释掉，然后换成“var loader = manager.getHandler(url);”，这个加上的要放在manager定义的下面，网上很多都没去说。
+
+2.在载入obj模型时，如果3dmax导出的mtl材质文件是带图片的，一定要处理好路径，这里建议全部换成线上地址，这里如果出现内部的跨域，在解析之前mtl前加上“mtlLoader.setCrossOrigin("Anonymous");”另外mtl材质里的图片如果是tga格式图片，可以换成png或者jpg的，tga没反应。
+
+3.这里还有一个坑，对一个模型修改颜色，旁边的模型可能也会变色。因为：“threejs中的网格物体对材质的是引用传递，不是值传递，如果material1被mesh1和mesh2用到了，改变mesh1.material.color，则mesh2的材质颜色也改了，在递归渲染的下一次就都生效了”建议单独给每个模型修改颜色直接修改材质,如下所示。
+
+```
+let material = new THREE.MeshBasicMaterial({
+  color: 0x000000,
+  // 前面FrontSide  背面：BackSide 双面：DoubleSide
+  // side: THREE.DoubleSide,
+});
+obj.children[0].material = material;
+```
 
 * 安装依赖
 
@@ -83,15 +100,15 @@ export default {
     init() {
       this.scene = new THREE.Scene();
       // this.scene.background = new THREE.Color(0xf0f0f0);
-      this.scene.add(new THREE.AmbientLight(0x0000)); //环境光
-      this.light = new THREE.DirectionalLight(0x1e90ff, 1); //从正上方（不是位置）照射过来的平行光，0.45的强度
+      this.scene.add(new THREE.AmbientLight(0xffffff)); // 环境光3dmax默认白色
+      this.light = new THREE.DirectionalLight(0x1e90ff, 1); // 从正上方（不是位置）照射过来的平行光，0.45的强度
       this.light.position.set(100, 200, 100);
       this.light.position.multiplyScalar(0.3);
       this.scene.add(this.light);
-      //利用一个轴对象以可视化的3轴以简单的方式。X轴是红色的。Y轴是绿色的。Z轴是蓝色的。这有助于理解在空间的所有三个轴的方向。
-      let axisHelper = new THREE.AxisHelper(20); //参数是坐标轴的长度
+      // 利用一个轴对象以可视化的3轴以简单的方式。X轴是红色的。Y轴是绿色的。Z轴是蓝色的。这有助于理解在空间的所有三个轴的方向。
+      let axisHelper = new THREE.AxisHelper(20); // 参数是坐标轴的长度
       this.scene.add(axisHelper);
-      //初始化相机
+      // 初始化相机
       this.camera = new THREE.PerspectiveCamera(
         45,
         window.innerWidth / window.innerHeight,
@@ -100,14 +117,14 @@ export default {
       );
       this.camera.position.set(0, 0, 20);
       this.camera.lookAt(this.scene.position);
-      //初始化控制器
+      // 初始化控制器
       this.controls = new OrbitControls(this.camera);
       this.controls.target.set(0, 0, 10);
       this.controls.minDistance = 80;
       this.controls.maxDistance = 400;
       this.controls.maxPolarAngle = Math.PI / 3;
       this.controls.update();
-      //渲染
+      // 渲染
       this.renderer = new THREE.WebGLRenderer({
         alpha: true,
       });
@@ -117,13 +134,13 @@ export default {
       this.camera.add(pointLight);
       this.scene.add(this.camera);
       // this.renderer.setClearColor(0x000000);
-      this.renderer.setPixelRatio(window.devicePixelRatio); //为了兼容高清屏幕
+      this.renderer.setPixelRatio(window.devicePixelRatio); // 为了兼容高清屏幕
       this.renderer.setSize(window.innerWidth, window.innerHeight);
 
       this.$el.appendChild(this.renderer.domElement);
-      window.addEventListener("resize", this.onWindowResize, false); //添加窗口监听事件（resize-onresize即窗口或框架被重新调整大小）
+      window.addEventListener("resize", this.onWindowResize, false); // 添加窗口监听事件（resize-onresize即窗口或框架被重新调整大小）
     },
-    //窗口监听函数
+    // 窗口监听函数
     onWindowResize() {
       this.camera.aspect = window.innerWidth / window.innerHeight;
       this.camera.updateProjectionMatrix();
@@ -137,20 +154,21 @@ export default {
     render() {
       this.renderer.render(this.scene, this.camera);
     },
-    //外部模型加载函数
+    // 外部模型加载函数
     loadObj({ mtl, object, typeName }) {
       let objLoader = new OBJLoader();
       let mtlLoader = new MTLLoader();
       // let _this = this;
-      //包含材质
+      // 包含材质
       // mtlLoader.setPath("/static/models/")
+      mtlLoader.setCrossOrigin("Anonymous");
       mtlLoader.load(mtl, (materials) => {
         // console.log("acm", acm);
-        // materials.preload();
+        materials.preload();
         objLoader.setMaterials(materials);
         objLoader.load(object, (obj) => {
           // console.log(obj);
-          // obj.position.set(0, 0, 0); //模型摆放的位置
+          // obj.position.set(0, 0, 0); // 模型摆放的位置
           // if (typeName === "wc") {
           //   obj.rotation.set(0, Math.PI / 2, 0);
           //   obj.position.set(-4.5, 0, 10);
@@ -163,7 +181,7 @@ export default {
           //   obj.position.set(0, 5, 5);
           // }
           obj.typeName = typeName;
-          obj.scale.set(0.0008, 0.0008, 0.0008); //模型放大或缩小，有的时候看不到模型，考虑是不是模型太小或太大。
+          obj.scale.set(0.0008, 0.0008, 0.0008); // 模型放大或缩小，有的时候看不到模型，考虑是不是模型太小或太大。
           this.scene.add(obj);
         });
       });
@@ -174,8 +192,8 @@ export default {
     mouseClick(event) {
       this.scene.children.forEach((item) => {
         if (item.typeName === "xb") {
-          let ljaxis = new THREE.Vector3(1, 0, 0); //向量axis
-          item.rotateOnAxis(ljaxis, Math.PI / 8); //绕axis轴旋转π/8
+          let ljaxis = new THREE.Vector3(1, 0, 0); // 向量axis
+          item.rotateOnAxis(ljaxis, Math.PI / 8); // 绕axis轴旋转π/8
         }
       });
       // 获取 raycaster 和所有模型相交的数组，其中的元素按照距离排序，越近的越靠前
