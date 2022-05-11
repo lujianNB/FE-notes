@@ -3,7 +3,7 @@
  * @LastEditors: 卢建
  * @Description: vue结合three.js载入多个obj模型交互场景
  * @Date: 2021-12-03 14:41:50
- * @LastEditTime: 2022-04-26 13:32:19
+ * @LastEditTime: 2022-05-11 14:36:21
 -->
 # vue结合three.js载入多个obj模型交互场景
 
@@ -43,7 +43,7 @@ npm i three three-css2drender three-obj-mtl-loader three-orbit-controls -S
  * @LastEditTime: 2021-12-03 14:59:10
 -->
 <template>
-  <div class="obj" @click="mouseClick"></div>
+  <div class="lj-obj" @click="mouseClick"></div>
 </template>
 <script>
 import * as THREE from "three";
@@ -266,8 +266,8 @@ export default {
 };
 </script>
  
-<style scoped>
-.obj {
+<style scoped lang="scss">
+.lj-obj {
   width: 100%;
   height: 100%;
 }
@@ -277,3 +277,5 @@ export default {
 * 效果图
 
 <img src="../img/3d-model.jpg" alt="obj模型效果图"></img>
+
+**注意合理利用组对象group，有的交互操作group要比较方便。**
