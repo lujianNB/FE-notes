@@ -1,0 +1,1269 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据源和图层配置 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Mapbox常用表达式.html" />
+    
+    
+    <link rel="prev" href="创建一个新地图.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    电子书
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../电子书/电子书.html">
+            
+                <a href="../电子书/电子书.html">
+            
+                    
+                    电子书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    封装好的文件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../封装好的文件/axios封装.html">
+            
+                <a href="../封装好的文件/axios封装.html">
+            
+                    
+                    axios封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../封装好的文件/css样式重置.html">
+            
+                <a href="../封装好的文件/css样式重置.html">
+            
+                    
+                    css样式重置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    设计模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../设计模式/代理模式.html">
+            
+                <a href="../设计模式/代理模式.html">
+            
+                    
+                    代理模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../设计模式/设计模式六大原则.html">
+            
+                <a href="../设计模式/设计模式六大原则.html">
+            
+                    
+                    设计模式六大原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../设计模式/职责链模式.html">
+            
+                <a href="../设计模式/职责链模式.html">
+            
+                    
+                    职责链模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    项目中遇到的问题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../项目中遇到的问题/播放海康视频流.html">
+            
+                <a href="../项目中遇到的问题/播放海康视频流.html">
+            
+                    
+                    播放海康视频流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../项目中遇到的问题/高德地图使用中存在的问题.html">
+            
+                <a href="../项目中遇到的问题/高德地图使用中存在的问题.html">
+            
+                    
+                    高德地图使用中存在的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../项目中遇到的问题/关于加载3D模型导致所有输入框不能输入的问题.html">
+            
+                <a href="../项目中遇到的问题/关于加载3D模型导致所有输入框不能输入的问题.html">
+            
+                    
+                    关于加载3D模型导致所有输入框不能输入的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../项目中遇到的问题/数字精准度问题.html">
+            
+                <a href="../项目中遇到的问题/数字精准度问题.html">
+            
+                    
+                    数字精准度问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../项目中遇到的问题/elementui表格固定列覆盖底部滚动条.html">
+            
+                <a href="../项目中遇到的问题/elementui表格固定列覆盖底部滚动条.html">
+            
+                    
+                    elementui表格固定列覆盖底部滚动条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../项目中遇到的问题/elementui日期限制前后不能超过五天.html">
+            
+                <a href="../项目中遇到的问题/elementui日期限制前后不能超过五天.html">
+            
+                    
+                    elementui日期限制前后不能超过五天
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../项目中遇到的问题/ie对于打印时的问题.html">
+            
+                <a href="../项目中遇到的问题/ie对于打印时的问题.html">
+            
+                    
+                    ie对于打印时的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../项目中遇到的问题/ie浏览器使用elementui弹窗遮罩层在最外层.html">
+            
+                <a href="../项目中遇到的问题/ie浏览器使用elementui弹窗遮罩层在最外层.html">
+            
+                    
+                    ie浏览器使用elementui弹窗遮罩层在最外层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../项目中遇到的问题/vue结合three.js载入多个obj模型交互场景.html">
+            
+                <a href="../项目中遇到的问题/vue结合three.js载入多个obj模型交互场景.html">
+            
+                    
+                    vue结合three.js载入多个obj模型交互场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../项目中遇到的问题/vue使用elementui表格布局问题.html">
+            
+                <a href="../项目中遇到的问题/vue使用elementui表格布局问题.html">
+            
+                    
+                    vue使用elementui表格布局问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../项目中遇到的问题/vue中使用elementui表格动态合并数据.html">
+            
+                <a href="../项目中遇到的问题/vue中使用elementui表格动态合并数据.html">
+            
+                    
+                    vue中使用elementui表格动态合并数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    超图（MapboxGL）
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="准备开始阶段.html">
+            
+                <a href="准备开始阶段.html">
+            
+                    
+                    准备开始阶段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="创建一个新地图.html">
+            
+                <a href="创建一个新地图.html">
+            
+                    
+                    创建一个新地图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.3" data-path="数据源和图层配置.html">
+            
+                <a href="数据源和图层配置.html">
+            
+                    
+                    数据源和图层配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="Mapbox常用表达式.html">
+            
+                <a href="Mapbox常用表达式.html">
+            
+                    
+                    Mapbox常用表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    css
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../css/弹性盒布局滚动条设置.html">
+            
+                <a href="../css/弹性盒布局滚动条设置.html">
+            
+                    
+                    弹性盒布局滚动条设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    js
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../js/深拷贝与浅拷贝.html">
+            
+                <a href="../js/深拷贝与浅拷贝.html">
+            
+                    
+                    深拷贝与浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../js/事件监听对象.html">
+            
+                <a href="../js/事件监听对象.html">
+            
+                    
+                    事件监听对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../js/cookie与storage.html">
+            
+                <a href="../js/cookie与storage.html">
+            
+                    
+                    cookie与storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../js/es11新增.html">
+            
+                <a href="../js/es11新增.html">
+            
+                    
+                    es11新增
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    vue
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../vue/路由导航守卫.html">
+            
+                <a href="../vue/路由导航守卫.html">
+            
+                    
+                    路由导航守卫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../vue/虚拟dom和diff算法.html">
+            
+                <a href="../vue/虚拟dom和diff算法.html">
+            
+                    
+                    虚拟dom与diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../vue/vue路由实现原理.html">
+            
+                <a href="../vue/vue路由实现原理.html">
+            
+                    
+                    vue路由实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../vue/vue与elementui实现递归组件菜单.html">
+            
+                <a href="../vue/vue与elementui实现递归组件菜单.html">
+            
+                    
+                    vue与elementui实现递归组件菜单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    html
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数据源和图层配置</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6570;&#x636E;&#x6E90;&#x548C;&#x56FE;&#x5C42;&#x914D;&#x7F6E;">&#x6570;&#x636E;&#x6E90;&#x548C;&#x56FE;&#x5C42;&#x914D;&#x7F6E;</h1>
+<h2 id="&#x6570;&#x636E;&#x6E90;&#xFF08;sources&#xFF09;">&#x6570;&#x636E;&#x6E90;&#xFF08;Sources&#xFF09;</h2>
+<p><strong>&#x6E90;&#x7684;&#x7C7B;&#x578B;&#x7531;&quot;type&quot;&#x5C5E;&#x6027;&#x6307;&#x5B9A;&#xFF0C;&#x5E76;&#x4E14;&#x5FC5;&#x987B;&#x662F;vector&#xFF08;&#x77E2;&#x91CF;&#x5207;&#x7247;&#xFF09;&#xFF0C;raster&#xFF08;&#x6805;&#x683C;&#x5207;&#x7247;&#xFF0C;&#x6BD4;vector&#x591A;&#x4E86;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;tileSize&#x63A7;&#x5236;&#x7EBF;&#x56FE;&#x5C42;&#x7684;&#x5BBD;&#x5EA6;&#xFF09;&#xFF0C;raster-dem&#xFF08;&#x6805;&#x683C;&#x9AD8;&#x7A0B;&#xFF0C;&#x6BD4; raster &#x591A;&#x4E86;&#x4E00;&#x4E2A;&#x5C5E;&#x6027; encoding&#xFF09;&#xFF0C;geojson&#xFF0C;image&#xFF0C;video&#x4E4B;&#x4E00;&#x3002;</strong></p>
+<ul>
+<li>&#x6848;&#x4F8B;</li>
+</ul>
+<pre class="language-"><code>&quot;sources&quot;:{
+    &quot;raster-dem-source&quot;: {  //&#x540D;&#x5B57;
+        &quot;type&quot;: &quot;raster-dem&quot;, // &#x7C7B;&#x578B;&#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;url&quot;: &quot;mapbox://mapbox.satellite&quot; // TileJSON &#x7684;&#x8BF7;&#x6C42;&#x5730;&#x5740;&#xFF08;&#x53EF;&#x9009;&#xFF09;
+        &quot;tiles&quot;: [ // &#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5207;&#x7247;&#x6570;&#x636E;&#x6E90;&#x7684;&#x8BF7;&#x6C42;&#x5730;&#x5740;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x548C; TileJSON &#x4E2D;&#x7684; tiles &#x5C5E;&#x6027;&#x4E00;&#x81F4;&#xFF09;
+            &quot;http://a.example.com/tiles/{z}/{x}/{y}.pbf&quot;,
+            &quot;http://b.example.com/tiles/{z}/{x}/{y}.pbf&quot;
+        ],
+        &quot;bounds&quot;: [-180,-85.051129,180,85.051129], // &#x8FB9;&#x754C;&#x5750;&#x6807;&#x70B9;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x4E8E;&#x9650;&#x5B9A;&#x5207;&#x7247;&#x7684;&#x663E;&#x793A;&#x8303;&#x56F4;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; [-180,-85.051129,180,85.051129]&#xFF09;
+        &quot;scheme&quot;:&quot;xyz&quot;, // &#x5207;&#x7247;&#x5750;&#x6807;&#x7CFB;&#x65B9;&#x6848;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; xyz&#x3001;tms&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; xyz&#xFF09;
+        &quot;minzoom&quot;: 0, // &#x6700;&#x5C0F;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF09;
+        &quot;maxzoom&quot;: 22, // &#x6700;&#x5927;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 22&#xFF09;
+        &quot;attribution&quot;: &quot;&quot;, // &#x5C5E;&#x6027;&#x4FE1;&#x606F;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x4E8E;&#x5730;&#x56FE;&#x5C55;&#x793A;&#x65F6;&#x7ED9;&#x7528;&#x6237;&#x770B;&#x7684;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;&#xFF09;
+        &quot;tileSize&quot;: 256 // &#x5207;&#x7247;&#x7684;&#x6700;&#x5C0F;&#x5C55;&#x793A;&#x5C3A;&#x5BF8;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 512&#xFF0C;&#x5373; 1024/2&#xFF09;
+        &quot;encoding&quot;: &quot;mapbox&quot; // &#x7F16;&#x7801;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; terrarium&#x3001;mapbox&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; mapbox&#xFF09;
+    }
+}
+
+&quot;sources&quot;: {
+    &quot;geojson-source&quot;: {
+        &quot;type&quot;: &quot;geojson&quot;, // &#x7C7B;&#x578B;&#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;data&quot;: { // &#x6570;&#x636E;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C;&#x5FC5;&#x987B;&#x4E3A;&#x4E00;&#x4E2A; GeoJSON &#x6216;&#x8005; GeoJSON &#x7684;&#x8BF7;&#x6C42;&#x5730;&#x5740;&#xFF09;&#x4E0B;&#x9762;&#x662F;&#x683C;&#x5F0F;&#x6837;&#x4F8B;
+            &quot;type&quot;: &quot;Feature&quot;,
+            &quot;geometry&quot;: {
+                &quot;type&quot;: &quot;Point&quot;,
+                &quot;coordinates&quot;: [-77.0323, 38.9131]
+            },
+            &quot;properties&quot;: {
+                &quot;title&quot;: &quot;Mapbox DC&quot;,
+                &quot;marker-symbol&quot;: &quot;monument&quot;
+            }
+        },
+        // &quot;data&quot;: &quot;./lines.geojson&quot;,
+        &quot;maxzoom&quot;: 22, // &#x6700;&#x5927;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 22&#xFF09;
+        &quot;attribution&quot;: &quot;&quot;, // &#x5C5E;&#x6027;&#x4FE1;&#x606F;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x4E8E;&#x5730;&#x56FE;&#x5C55;&#x793A;&#x65F6;&#x7ED9;&#x7528;&#x6237;&#x770B;&#x7684;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;&#xFF09;
+        &quot;buffer&quot;: 128, // &#x5207;&#x7247;&#x7F13;&#x5B58;&#x533A;&#x5927;&#x5C0F;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 512&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 128&#xFF0C;&#x5982;&#x679C;&#x53D6;&#x503C;&#x4E3A; 512 &#x5219;&#x4EE3;&#x8868;&#x548C;&#x5207;&#x7247;&#x5927;&#x5C0F;&#x4E00;&#x6837;&#xFF09;
+        &quot;tolerance&quot;: 0.375, // &#x7B80;&#x5316;&#x529B;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C;&#x8D8A;&#x5927;&#x7B80;&#x5316;&#x529B;&#x5EA6;&#x8D8A;&#x5F3A;&#xFF0C;&#x51E0;&#x4F55;&#x9876;&#x70B9;&#x8D8A;&#x5C11;&#xFF0C;&#x52A0;&#x8F7D;&#x901F;&#x5EA6;&#x8D8A;&#x5FEB;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0.375&#xFF09;
+        &quot;cluster&quot;: false, // &#x662F;&#x5426;&#x5F00;&#x542F;&#x805A;&#x7C7B;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x4E8E;&#x5C06;&#x591A;&#x4E2A;&#x70B9;&#x805A;&#x7C7B;&#x5230;&#x4E00;&#x4E2A;&#x4E2A;&#x7684;&#x7FA4;&#x7EC4;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; false&#xFF09;
+        &quot;clusterRadius&quot;: 50, // &#x6BCF;&#x4E2A;&#x7FA4;&#x7EC4;&#x7684;&#x7684;&#x534A;&#x5F84;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 50&#xFF09;
+        &quot;clusterMaxZoom&quot;: 12, // &#x6BCF;&#x4E2A;&#x7FA4;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x5C42;&#x7EA7;&#xFF08;&#x5927;&#x4E8E;&#x6307;&#x5B9A;&#x7684;&#x5C42;&#x7EA7;&#x5C06;&#x4E0D;&#x663E;&#x793A;&#x805A;&#x7C7B;&#x7684;&#x7FA4;&#x7EC4;&#xFF09;
+        &quot;lineMetrics&quot;: false, // &#x662F;&#x5426;&#x8BA1;&#x7B97;&#x7EBF;&#x7684;&#x8DDD;&#x79BB;&#x5EA6;&#x91CF;&#xFF08;&#x989D;&#xFF0C;&#x6709;&#x70B9;&#x4E0D;&#x80FD;&#x7406;&#x89E3;&#xFF0C;&#x9700;&#x8981; layer &#x6307;&#x5B9A; line-gradient&#xFF09;
+        &quot;generateId&quot;: false // &#x662F;&#x5426;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x6BCF;&#x4E2A;&#x8981;&#x7D20;&#x751F;&#x6210;&#x5C5E;&#x6027; id &#x7684;&#x503C;
+    }
+}
+
+&quot;sources&quot;: {
+    &quot;image-source&quot;: {
+        &quot;type&quot;: &quot;image&quot;, // &#x7C7B;&#x578B;&#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;url&quot;: &quot;https://docs.mapbox.com/mapbox-gl-js/assets/radar.gif&quot;, // &#x56FE;&#x7247;/&#x89C6;&#x9891;&#x7684;&#x8BF7;&#x6C42;&#x5730;&#x5740;&#xFF08;&#x5FC5;&#x586B;&#xFF09;&#x82E5;&#x4E3A;&#x591A;&#x4E2A;&#xFF0C;&#x5219;&#x4E3A;urls
+        &quot;coordinates&quot;: [ // &#x5750;&#x6807;&#x70B9;&#x96C6;&#x5408;&#xFF08;&#x5FC5;&#x586B;&#xFF0C;&#x6307;&#x5B9A;&#x8981;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;&#x5750;&#x6807;&#x70B9;&#xFF09;
+            [-80.425, 46.437],
+            [-71.516, 46.437],
+            [-71.516, 37.936],
+            [-80.425, 37.936]
+        ]
+    }
+}
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</li>
+</ul>
+<pre class="language-"><code>// &#x6B64;&#x5904;&#x7684;name&#x4E3A;&#x6570;&#x636E;&#x6E90;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x9700;&#x8981;&#x6709;&#x552F;&#x4E00;&#x6027;&#x3002;
+map.addSource(&apos;name&apos;,option) // &#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x6E90;
+map.getSource(&apos;name&apos;) // &#x83B7;&#x53D6;&#x6570;&#x636E;&#x6E90;
+map.removeSource(&apos;name&apos;) // &#x5220;&#x9664;&#x6570;&#x636E;&#x6E90;
+</code></pre><h1 id="&#x56FE;&#x5C42;&#xFF08;layers&#xFF09;">&#x56FE;&#x5C42;&#xFF08;Layers&#xFF09;</h1>
+<p><strong>&#x56FE;&#x5C42;&#x6307;&#x5B9A;&#x4E86;&#x5982;&#x4F55;&#x6E32;&#x67D3;&#x6570;&#x636E;&#x6E90;&#x63D0;&#x4F9B;&#x7684;&#x6570;&#x636E;&#xFF0C;id&#x548C;type&#x5FC5;&#x586B;&#x3002;</strong></p>
+<ul>
+<li><p>id&#x6709;&#x552F;&#x4E00;&#x6027;&#x4E5F;&#x662F;&#x56FE;&#x5C42;&#x540D;</p>
+</li>
+<li><p>type&#x53EF;&#x9009;&#xFF1A;circle&#xFF08;&#x5706;&#x70B9;&#xFF09;&#xFF0C;symbol&#xFF08;&#x7B26;&#x53F7;&#xFF09;&#xFF0C;line&#xFF08;&#x7EBF;&#xFF09;&#xFF0C;heatmap&#xFF08;&#x70ED;&#x529B;&#x56FE;&#xFF09;&#xFF0C;fill&#xFF08;&#x586B;&#x5145;&#xFF09;&#xFF0C;fill-extrusion&#xFF08;&#x4E09;&#x7EF4;&#x586B;&#x5145;&#xFF09;&#xFF0C;background&#xFF08;&#x80CC;&#x666F;&#xFF09;&#xFF0C;raster&#xFF08;&#x6805;&#x683C;&#xFF09;&#xFF0C;hillshade&#xFF08;&#x5761;&#x9762;&#x9634;&#x5F71;&#xFF09;</p>
+</li>
+<li><p>&#x6848;&#x4F8B;&#xFF08;symbol&#x4E0E;circle&#x7684;&#x533A;&#x522B;&#x662F;&#xFF0C;symbol&#x53EF;&#x4EE5;&#x52A0;&#x56FE;&#x7247;&#x53CA;&#x6587;&#x5B57;&#x6807;&#x6CE8;&#xFF09;</p>
+</li>
+</ul>
+<pre class="language-"><code>// circle
+&quot;layers&quot;: [
+    {
+        &quot;id&quot;: &quot;circle-id&quot;, // &#x552F;&#x4E00; id &#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;type&quot;: &quot;circle&quot;, // &#x7C7B;&#x578B;&#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;metadata&quot;: { // &#x5143;&#x6570;&#x636E;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x4E8E;&#x4E3A; layer &#x9644;&#x52A0;&#x4EFB;&#x610F;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x4E3A;&#x907F;&#x514D;&#x51B2;&#x7A81;&#xFF0C;&#x5EFA;&#x8BAE;&#x6DFB;&#x52A0;&#x524D;&#x7F00;&#xFF0C;&#x5982; mapbox:&#xFF09;
+            &quot;mapbox:name&quot;: &quot;test&quot;
+        },
+        &quot;source&quot;: &quot;source-name&quot;, // &#x6570;&#x636E;&#x6E90;&#x7684;&#x540D;&#x79F0;&#xFF08;&#x9664;&#x4E86; layer &#x7684; type &#x4E3A; background &#x5916;&#xFF0C;source &#x5FC5;&#x586B;&#xFF09; 
+        &quot;source-layer&quot;: &quot;source-layer-name&quot;, // &#x6570;&#x636E;&#x6E90;&#x7684;&#x56FE;&#x5C42;&#xFF08;&#x53EA;&#x6709;&#x6570;&#x636E;&#x6E90; source &#x7684; type &#x4E3A; vector &#x65F6;&#xFF0C;&#x624D;&#x80FD;&#x8BBE;&#x7F6E; source-layer&#xFF0C;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x4E0D;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#xFF09;
+        &quot;minzoom&quot;: 0, // &#x6700;&#x5C0F;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5C0F;&#x4E8E;&#x6B64; minzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;maxzoom&quot;: 24, // &#x6700;&#x5927;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5927;&#x4E8E;&#x6B64; maxzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;filter&quot;: [], // &#x8FC7;&#x6EE4;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x7279;&#x5B9A;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8FC7;&#x6EE4;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x6E90;&#x7684;&#x8981;&#x7D20;&#x3002;&#x5177;&#x4F53;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8BE6;&#x89C1; expression&#xFF09;
+        &quot;layout&quot;: { // &#x5E03;&#x5C40;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;visibility&quot;: &quot;visible&quot;, // &#x53EF;&#x89C1;&#x6027;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; none&#x3001;visible&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; visible&#xFF09;
+        },
+        &quot;paint&quot;: { // &#x7ED8;&#x5236;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;circle-opacity&quot;: 1, // &#x5706;&#x70B9;&#x7684;&#x4E0D;&#x900F;&#x660E;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1&#xFF09;
+            &quot;circle-radius&quot;: 5, // &#x5706;&#x70B9;&#x7684;&#x534A;&#x5F84;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 0&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 5&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#xFF09;
+            &quot;circle-color&quot;: &quot;#000000&quot;, // &#x5706;&#x70B9;&#x7684;&#x989C;&#x8272;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; #000000&#xFF09;
+            &quot;circle-blur&quot;: 0, // &#x5706;&#x70B9;&#x7684;&#x865A;&#x5316;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#x3002;&#x5F53;&#x503C;&#x4E3A; 1 &#x65F6;&#xFF0C;&#x8868;&#x793A;&#x628A;&#x5706;&#x865A;&#x5316;&#x5230;&#x53EA;&#x6709;&#x5706;&#x5FC3;&#x662F;&#x4E0D;&#x900F;&#x660E;&#x7684;&#xFF09;
+            &quot;circle-translate&quot;: [0, 0], // &#x5706;&#x70B9;&#x7684;&#x5E73;&#x79FB;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x901A;&#x8FC7;&#x5E73;&#x79FB; [x, y] &#x8FBE;&#x5230;&#x4E00;&#x5B9A;&#x7684;&#x504F;&#x79FB;&#x91CF;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; [0, 0]&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#x3002;&#xFF09;
+            &quot;circle-translate-anchor&quot;: &quot;map&quot;, // &#x5706;&#x70B9;&#x7684;&#x5E73;&#x79FB;&#x951A;&#x70B9;&#xFF0C;&#x5373;&#x76F8;&#x5BF9;&#x7684;&#x53C2;&#x8003;&#x7269;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; map&#x3001;viewport&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; map&#xFF09;
+            &quot;circle-pitch-scale&quot;: &quot;map&quot;, // &#x5730;&#x56FE;&#x503E;&#x659C;&#x65F6;&#x5706;&#x70B9;&#x7684;&#x7F29;&#x653E;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; map&#x3001;viewport&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; map&#x3002;&#x503C;&#x4E3A; viewport &#x65F6;&#xFF0C;&#x5706;&#x70B9;&#x4E0D;&#x4F1A;&#x7F29;&#x653E;&#xFF09;
+            &quot;circle-pitch-alignment&quot;: &quot;map&quot;, // &#x5730;&#x56FE;&#x503E;&#x659C;&#x65F6;&#x5706;&#x70B9;&#x7684;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; map&#x3001;viewport&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; map&#xFF09;
+            &quot;circle-stroke-width&quot;: 0, // &#x5706;&#x70B9;&#x7684;&#x63CF;&#x8FB9;&#x5BBD;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 0&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#xFF09;
+            &quot;circle-stroke-color&quot;: &quot;#000000&quot;, // &#x5706;&#x70B9;&#x7684;&#x63CF;&#x8FB9;&#x989C;&#x8272;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; #000000&#xFF09;
+            &quot;circle-stroke-opacity&quot;: 1 // &#x5706;&#x70B9;&#x7684;&#x63CF;&#x8FB9;&#x4E0D;&#x900F;&#x660E;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1&#xFF09;
+        }
+    }
+]
+
+// symbol
+&quot;layers&quot;: [
+    {
+        &quot;id&quot;: &quot;symbol-id&quot;, // &#x552F;&#x4E00; id &#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;type&quot;: &quot;symbol&quot;, // &#x7C7B;&#x578B;&#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;metadata&quot;: { // &#x5143;&#x6570;&#x636E;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x4E8E;&#x4E3A; layer &#x9644;&#x52A0;&#x4EFB;&#x610F;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x4E3A;&#x907F;&#x514D;&#x51B2;&#x7A81;&#xFF0C;&#x5EFA;&#x8BAE;&#x6DFB;&#x52A0;&#x524D;&#x7F00;&#xFF0C;&#x5982; mapbox:&#xFF09;
+            &quot;mapbox:name&quot;: &quot;test&quot;
+        },
+        &quot;source&quot;: &quot;source-name&quot;, // &#x6570;&#x636E;&#x6E90;&#x7684;&#x540D;&#x79F0;&#xFF08;&#x9664;&#x4E86; layer &#x7684; type &#x4E3A; background &#x5916;&#xFF0C;source &#x5FC5;&#x586B;&#xFF09; 
+        &quot;source-layer&quot;: &quot;source-layer-name&quot;, // &#x6570;&#x636E;&#x6E90;&#x7684;&#x56FE;&#x5C42;&#xFF08;&#x53EA;&#x6709;&#x6570;&#x636E;&#x6E90; source &#x7684; type &#x4E3A; vector &#x65F6;&#xFF0C;&#x624D;&#x80FD;&#x8BBE;&#x7F6E; source-layer&#xFF0C;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x4E0D;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#xFF09;
+        &quot;minzoom&quot;: 0, // &#x6700;&#x5C0F;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5C0F;&#x4E8E;&#x6B64; minzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;maxzoom&quot;: 24, // &#x6700;&#x5927;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5927;&#x4E8E;&#x6B64; maxzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;filter&quot;: [], // &#x8FC7;&#x6EE4;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x7279;&#x5B9A;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8FC7;&#x6EE4;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x6E90;&#x7684;&#x8981;&#x7D20;&#x3002;&#x5177;&#x4F53;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8BE6;&#x89C1; expression&#xFF09;
+        &quot;layout&quot;: { // &#x5E03;&#x5C40;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;visibility&quot;: &quot;visible&quot;, // &#x53EF;&#x89C1;&#x6027;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; none&#x3001;visible&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; visible&#xFF09;
+            &quot;symbol-placement&quot;: &quot;point&quot;, // &#x7B26;&#x53F7;&#x7684;&#x4F4D;&#x7F6E;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; point&#x3001;line&#x3001;line-center&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; point&#xFF09;
+            // --- point&#xFF1A;&#x7B26;&#x53F7;&#x5728;&#x51E0;&#x4F55;&#x5F62;&#x72B6;&#x7684;&#x70B9;&#x4E0A;
+            // --- line&#xFF1A;&#x7B26;&#x53F7;&#x5728;&#x51E0;&#x4F55;&#x5F62;&#x72B6;&#x7684;&#x7EBF;&#x4E0A;&#xFF08;&#x51E0;&#x4F55;&#x5F62;&#x72B6;&#x53EA;&#x80FD;&#x4E3A; LineString &#x6216; Polygon&#xFF09;
+            // --- line-center&#xFF1A;&#x7B26;&#x53F7;&#x5728;&#x51E0;&#x4F55;&#x5F62;&#x72B6;&#x7684;&#x7EBF;&#x7684;&#x4E2D;&#x5FC3;&#x70B9;&#x4E0A;&#xFF08;&#x51E0;&#x4F55;&#x5F62;&#x72B6;&#x53EA;&#x80FD;&#x4E3A; LineString &#x6216; Polygon&#xFF09;
+            &quot;symbol-spacing&quot;: 250, // &#x7B26;&#x53F7;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 250&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#x3002;&#x53EA;&#x6709; symbol-placement &#x4E3A; line &#x65F6;&#x624D;&#x6709;&#x6548;&#xFF09;
+            &quot;symbol-avoid-edges&quot;: false, // &#x662F;&#x5426;&#x907F;&#x514D;&#x8FB9;&#x7F18;&#x51B2;&#x7A81;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; false&#x3002;&#x5F53;&#x4E3A; true &#x65F6;&#xFF0C;&#x7B26;&#x53F7;&#x4E0D;&#x4F1A;&#x8D85;&#x8FC7;&#x5207;&#x7247;&#x7684;&#x8FB9;&#x7F18;&#xFF09;
+            &quot;symbol-sort-key&quot;: 1, // &#x6392;&#x5E8F;&#x7684;&#x53C2;&#x8003;&#x503C;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x65E0;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x503C;&#x8D8A;&#x5927;&#xFF0C;&#x8D8A;&#x5728;&#x4E0A;&#x65B9;&#xFF09; 
+            &quot;symbol-z-order&quot;: &quot;auto&quot;, // z &#x8F74;&#x4E0A;&#x7684;&#x987A;&#x5E8F;&#x63A7;&#x5236;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; auto&#x3001;viewport-y&#x3001;source&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; auto&#xFF09;
+
+            // &#x56FE;&#x6807;&#x7C7B;&#x5C5E;&#x6027;&#xFF08;&#x9700;&#x8981;&#x8BBE;&#x7F6E; icon-image&#xFF09;
+            &quot;icon-image&quot;: &quot;&quot;, // &#x56FE;&#x6807;&#x7684;&#x56FE;&#x7247;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x8FD9;&#x91CC;&#x586B;&#x5199;&#x5728; sprite &#x96EA;&#x78A7;&#x56FE;&#x4E2D;&#x56FE;&#x6807;&#x540D;&#x79F0;&#xFF09;
+            &quot;icon-size&quot;: 1, // &#x56FE;&#x6807;&#x7684;&#x5927;&#x5C0F;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 0&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1&#x3002;&#x8FD9;&#x91CC;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x56FE;&#x6807;&#x5BF9;&#x5E94;&#x7684;&#x539F;&#x59CB;&#x56FE;&#x7247;&#x7684;&#x5927;&#x5C0F;&#x7684;&#x7F29;&#x653E;&#x6BD4;&#x4F8B;&#x3002;&#x503C;&#x4E3A; 1 &#x8868;&#x793A;&#x56FE;&#x6807;&#x5927;&#x5C0F;&#x4E3A;&#x539F;&#x59CB;&#x56FE;&#x7247;&#x7684;&#x5927;&#x5C0F;&#xFF09;
+            &quot;icon-padding&quot;: 2, // &#x56FE;&#x6807;&#x7684;&#x5916;&#x8FB9;&#x8DDD;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 0&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 2&#x3002;&#x53EF;&#x7528;&#x4E8E;&#x78B0;&#x649E;&#x68C0;&#x6D4B;&#xFF09;
+            &quot;icon-offset&quot;: [0, 0], // &#x56FE;&#x6807;&#x7684;&#x504F;&#x79FB;&#x91CF;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; [0, 0]&#xFF09;
+            &quot;icon-anchor&quot;: &quot;center&quot;, // &#x56FE;&#x6807;&#x4E0E;&#x951A;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x5173;&#x7CFB;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; center&#x3001;left&#x3001;right&#x3001;top&#x3001;bottom&#x3001;top-left&#x3001;top-right&#x3001;bottom-left&#x3001;bottom-right&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; center&#xFF09;
+            &quot;icon-rotation&quot;: 0, // &#x56FE;&#x6807;&#x7684;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x89D2;&#x5EA6;&#xFF09;
+            &quot;icon-allow-overlap&quot;: false, // &#x662F;&#x5426;&#x5141;&#x8BB8;&#x56FE;&#x6807;&#x91CD;&#x53E0;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; false&#x3002;&#x5F53;&#x503C;&#x4E3A; true &#x65F6;&#xFF0C;&#x56FE;&#x6807;&#x5373;&#x4F7F;&#x548C;&#x5176;&#x4ED6;&#x7B26;&#x53F7;&#x89E6;&#x78B0;&#x4E5F;&#x4F1A;&#x663E;&#x793A;&#xFF09;
+            &quot;icon-ignore-placement&quot;: false, // &#x662F;&#x5426;&#x5FFD;&#x7565;&#x56FE;&#x6807;&#x4F4D;&#x7F6E;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; false&#x3002;&#x5F53;&#x503C;&#x4E3A; true &#x65F6;&#xFF0C;&#x5176;&#x4ED6;&#x7B26;&#x53F7;&#x5373;&#x4F7F;&#x4E0E;&#x6B64;&#x56FE;&#x6807;&#x89E6;&#x78B0;&#x4E5F;&#x4F1A;&#x663E;&#x793A;&#xFF09;
+            &quot;icon-optional&quot;: false, // &#x56FE;&#x6807;&#x662F;&#x5426;&#x53EF;&#x4E0D;&#x663E;&#x793A;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; false&#x3002;&#x5F53;&#x503C;&#x4E3A; true &#x65F6;&#xFF0C;&#x5982;&#x679C;&#x56FE;&#x6807;&#x4E0E;&#x6587;&#x672C;&#x6807;&#x7B7E;&#x78B0;&#x649E;&#xFF0C;&#x5219;&#x663E;&#x793A;&#x6587;&#x672C;&#x6807;&#x7B7E;&#xFF09;
+            &quot;icon-text-fit&quot;: &quot;none&quot;, // &#x56FE;&#x6807;&#x4E0E;&#x6587;&#x672C;&#x7684;&#x5927;&#x5C0F;&#x9002;&#x5E94;&#x5173;&#x7CFB;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; none&#x3001;width&#x3001;height&#x3001;both&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; none&#xFF09;
+            // --- none&#xFF1A;&#x56FE;&#x6807;&#x6309;&#x5176;&#x672C;&#x8EAB;&#x7684;&#x6BD4;&#x4F8B;&#x663E;&#x793A;
+            // --- width&#xFF1A;&#x56FE;&#x6807;&#x5728; x &#x8F74;&#x4E0A;&#x7F29;&#x653E;&#x4EE5;&#x9002;&#x5E94;&#x6587;&#x672C;&#x7684;&#x5BBD;&#x5EA6;
+            // --- height&#xFF1A;&#x56FE;&#x6807;&#x5728; y &#x8F74;&#x4E0A;&#x7F29;&#x653E;&#x4EE5;&#x9002;&#x5E94;&#x6587;&#x672C;&#x7684;&#x9AD8;&#x5EA6;
+            // --- both&#xFF1A;&#x56FE;&#x6807;&#x5728; x &#x548C; y &#x8F74;&#x4E0A;&#x7F29;&#x653E;&#x4EE5;&#x9002;&#x5E94;&#x6587;&#x672C;&#x7684;&#x5BBD;&#x9AD8;
+            &quot;icon-text-fit-padding&quot;: [0, 0, 0, 0], // &#x56FE;&#x6807;&#x4E0E;&#x6587;&#x672C;&#x7684;&#x5185;&#x8FB9;&#x8DDD;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; [0,0,0,0]&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#xFF09;
+            &quot;icon-keep-upright&quot;: false, // &#x5F53; icon-rotation-alignment &#x4E3A; map&#xFF0C;&#x4E14; symbol-placement &#x4E3A; line &#x6216;&#x8005; line-center &#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A; true &#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x56FE;&#x6807;&#x4E0A;&#x4E0B;&#x98A0;&#x5012;
+            &quot;icon-rotation-alignment&quot;: &quot;auto&quot;, // &#x5730;&#x56FE;&#x65CB;&#x8F6C;&#x65F6;&#x56FE;&#x6807;&#x7684;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; map&#x3001;viewport&#x3001;auto&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; auto&#xFF09;
+            // --- map&#xFF1A;&#x5F53; symbol-placement &#x4E3A; point &#x65F6;&#xFF0C;&#x56FE;&#x6807;&#x4E0E;&#x5730;&#x56FE;&#x7684;&#x4E1C;&#x897F;&#x65B9;&#x5411;&#x5BF9;&#x9F50;&#xFF1B;&#x5F53; symbol-placement &#x4E3A; line &#x65F6;&#xFF0C;&#x56FE;&#x6807;&#x7684; x &#x8F74;&#x548C;&#x7EBF;&#x5BF9;&#x9F50;
+            // --- viewport&#xFF1A;&#x56FE;&#x6807;&#x7684; x &#x8F74;&#x548C;&#x89C6;&#x53E3;&#x7684; x &#x8F74;&#x5BF9;&#x9F50;
+            // --- auto&#xFF1A;&#x5F53; symbol-placement &#x4E3A; point &#x65F6;&#xFF0C;&#x548C; viewport &#x4E00;&#x81F4;&#xFF1B;&#x5F53; symbol-placement &#x4E3A; line &#x65F6;&#xFF0C;&#x548C; map &#x4E00;&#x81F4;
+            &quot;icon-pitch-alignment&quot;: &quot;auto&quot;, // &#x5730;&#x56FE;&#x503E;&#x659C;&#x65F6;&#x56FE;&#x6807;&#x7684;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; map&#x3001;viewport&#x3001;auto&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; auto&#xFF09;
+            // --- map&#xFF1A;&#x56FE;&#x6807;&#x7684; x &#x8F74;&#x4E0E;&#x5730;&#x56FE;&#x5E73;&#x9762;&#x5BF9;&#x9F50;
+            // --- viewport&#xFF1A;&#x56FE;&#x6807;&#x7684; x &#x8F74;&#x548C;&#x89C6;&#x53E3;&#x7684; x &#x8F74;&#x5BF9;&#x9F50;
+            // --- auto&#xFF1A;&#x5F53; symbol-placement &#x4E3A; point &#x65F6;&#xFF0C;&#x548C; viewport &#x4E00;&#x81F4;&#xFF1B;&#x5F53; symbol-placement &#x4E3A; line &#x65F6;&#xFF0C;&#x548C; map &#x4E00;&#x81F4;
+
+            // &#x6587;&#x672C;&#x7C7B;&#x5C5E;&#x6027;&#xFF08;&#x9700;&#x8981;&#x6307;&#x5B9A; text-field&#xFF09;
+            &quot;text-rotation-alignment&quot;: &quot;auto&quot;, // &#x4E0E; icon-rotation-alignment &#x7C7B;&#x4F3C;
+            &quot;text-pitch-alignment&quot;: &quot;auto&quot;, // &#x4E0E; icon-pitch-alignment &#x7C7B;&#x4F3C;
+            &quot;text-field&quot;: &quot;&quot;, // &#x6587;&#x672C;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x6BB5;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; &quot;&quot;&#xFF09;
+            &quot;text-font&quot;: [&quot;Open Sans Regular&quot;,&quot;Arial Unicode MS Regular&quot;], // &#x6587;&#x672C;&#x7684;&#x5B57;&#x4F53;&#x96C6;&#x5408;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; [&quot;Open Sans Regular&quot;,&quot;Arial Unicode MS Regular&quot;]&#xFF09;
+            &quot;text-size&quot;: 16, // &#x6587;&#x672C;&#x7684;&#x5927;&#x5C0F;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 16&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#xFF09;
+            &quot;text-max-width&quot;: 10, // &#x6587;&#x672C;&#x7684;&#x6700;&#x5927;&#x5BBD;&#x5EA6;&#xFF0C;&#x8D85;&#x8FC7;&#x5219;&#x6298;&#x884C;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 10&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;ems&#xFF09; 
+            &quot;text-line-height&quot;: 1.2, // &#x6587;&#x672C;&#x7684;&#x884C;&#x9AD8;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1.2&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;ems&#xFF09;
+            &quot;text-letter-spacing&quot;: 0, // &#x6587;&#x672C;&#x7684;&#x5B57;&#x7B26;&#x95F4;&#x8DDD;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;ems&#xFF09;
+            &quot;text-justify&quot;: &quot;center&quot;, // &#x6587;&#x672C;&#x7684;&#x6C34;&#x5E73;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; auto&#x3001;left&#x3001;center&#x3001;right&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; center&#xFF09;
+            &quot;text-anchor&quot;: &quot;center&quot;, // &#x6587;&#x672C;&#x4E0E;&#x951A;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x5173;&#x7CFB;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; center&#x3001;left&#x3001;right&#x3001;top&#x3001;bottom&#x3001;top-left&#x3001;top-right&#x3001;bottom-left&#x3001;bottom-right&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; center&#xFF09;
+            &quot;text-variable-anchor&quot;: &quot;center&quot;, // &#x4E0E; text-anchor&#xFF08;&#x4F18;&#x5148;&#x7EA7;&#x66F4;&#x9AD8;&#xFF09; &#x7C7B;&#x4F3C;&#xFF0C;&#x6709;&#x70B9;&#x4E0D;&#x61C2;
+            &quot;text-max-angle&quot;: 45, // &#x5F53; symbol-placement &#x4E3A; line &#x6216; line-center &#x65F6;&#xFF0C;&#x6587;&#x672C;&#x76F8;&#x90BB;&#x5B57;&#x7B26;&#x7684;&#x6700;&#x5927;&#x5939;&#x89D2;&#xFF0C;&#x9ED8;&#x8BA4; 45 &#x5EA6;
+            &quot;text-rotate&quot;: 0, // &#x6587;&#x672C;&#x7684;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x89D2;&#x5EA6;&#xFF09;
+            &quot;text-padding&quot;: 2, // &#x6587;&#x672C;&#x7684;&#x5916;&#x8FB9;&#x8DDD;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 0&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 2&#x3002;&#x53EF;&#x7528;&#x4E8E;&#x78B0;&#x649E;&#x68C0;&#x6D4B;&#xFF09;
+            &quot;text-keep-upright&quot;: false, // &#x5F53; icon-rotation-alignment &#x4E3A; map&#xFF0C;&#x4E14; symbol-placement &#x4E3A; line &#x6216;&#x8005; line-center &#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A; true &#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x6587;&#x672C;&#x4E0A;&#x4E0B;&#x98A0;&#x5012;
+            &quot;text-transform&quot;: &quot;none&quot;, // &#x6587;&#x672C;&#x5927;&#x5C0F;&#x5199;&#x8F6C;&#x6362;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; none&#x3001;uppercase&#x3001;lowercase&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; none&#xFF09;
+            &quot;text-offset&quot;: [0, 0], // &#x56FE;&#x6807;&#x7684;&#x504F;&#x79FB;&#x91CF;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; [0, 0]&#xFF09;
+            &quot;text-radial-offset&quot;: 0, // &#x6587;&#x672C;&#x7684;&#x5F84;&#x5411;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x6BD4; text-offset &#x9AD8;
+            &quot;text-allow-overlap&quot;: false, // &#x662F;&#x5426;&#x5141;&#x8BB8;&#x6587;&#x672C;&#x91CD;&#x53E0;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; false&#x3002;&#x5F53;&#x503C;&#x4E3A; true &#x65F6;&#xFF0C;&#x6587;&#x672C;&#x5373;&#x4F7F;&#x548C;&#x5176;&#x4ED6;&#x7B26;&#x53F7;&#x89E6;&#x78B0;&#x4E5F;&#x4F1A;&#x663E;&#x793A;&#xFF09;
+            &quot;text-ignore-placement&quot;: false, // &#x662F;&#x5426;&#x5FFD;&#x7565;&#x6587;&#x672C;&#x4F4D;&#x7F6E;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; false&#x3002;&#x5F53;&#x503C;&#x4E3A; true &#x65F6;&#xFF0C;&#x5176;&#x4ED6;&#x7B26;&#x53F7;&#x5373;&#x4F7F;&#x4E0E;&#x6B64;&#x6587;&#x672C;&#x89E6;&#x78B0;&#x4E5F;&#x4F1A;&#x663E;&#x793A;&#xFF09;
+            &quot;text-optional&quot;: false // &#x6587;&#x672C;&#x662F;&#x5426;&#x53EF;&#x4E0D;&#x663E;&#x793A;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; false&#x3002;&#x5F53;&#x503C;&#x4E3A; true &#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6587;&#x672C;&#x4E0E;&#x56FE;&#x6807;&#x78B0;&#x649E;&#xFF0C;&#x5219;&#x663E;&#x793A;&#x56FE;&#x6807;&#xFF09;
+
+        },
+        &quot;paint&quot;: { // &#x7ED8;&#x5236;&#x7C7B;&#x5C5E;&#x6027;
+
+            // &#x56FE;&#x6807;&#x7C7B;&#x5C5E;&#x6027;&#xFF08;&#x9700;&#x8981;&#x8BBE;&#x7F6E; icon-image&#xFF09;
+            &quot;icon-opacity&quot;: 1, // &#x56FE;&#x6807;&#x7684;&#x4E0D;&#x900F;&#x660E;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1&#xFF09;
+            &quot;icon-color&quot;: &quot;#000000&quot;, // &#x56FE;&#x6807;&#x7684;&#x989C;&#x8272;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; #000000&#xFF09;
+            &quot;icon-halo-color&quot;: &quot;rgba(0,0,0,0)&quot;, // &#x56FE;&#x6807;&#x7684;&#x5149;&#x6655;&#x989C;&#x8272;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; rgba(0,0,0,0)&#xFF09;
+            &quot;icon-halo-width&quot;: 0, // &#x56FE;&#x6807;&#x7684;&#x5149;&#x6655;&#x5BBD;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 0&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#xFF09;
+            &quot;icon-halo-blur&quot;: 0, // &#x56FE;&#x6807;&#x7684;&#x5149;&#x6655;&#x6A21;&#x7CCA;&#x5BBD;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 0&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#xFF09;
+            &quot;icon-translate&quot;: [0, 0], // &#x56FE;&#x6807;&#x7684;&#x5E73;&#x79FB;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x901A;&#x8FC7;&#x5E73;&#x79FB; [x, y] &#x8FBE;&#x5230;&#x4E00;&#x5B9A;&#x7684;&#x504F;&#x79FB;&#x91CF;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; [0, 0]&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#x3002;&#xFF09;
+            &quot;icon-translate-anchor&quot;: &quot;map&quot;, // &#x56FE;&#x6807;&#x7684;&#x5E73;&#x79FB;&#x951A;&#x70B9;&#xFF0C;&#x5373;&#x76F8;&#x5BF9;&#x7684;&#x53C2;&#x8003;&#x7269;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; map&#x3001;viewport&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; map&#xFF09;
+
+            // &#x6587;&#x672C;&#x7C7B;&#x5C5E;&#x6027;&#xFF08;&#x9700;&#x8981;&#x8BBE;&#x7F6E; text-field&#xFF09;
+            &quot;text-opacity&quot;: 1, // &#x6587;&#x672C;&#x7684;&#x4E0D;&#x900F;&#x660E;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1&#xFF09;
+            &quot;text-color&quot;: &quot;#000000&quot;, // &#x6587;&#x672C;&#x7684;&#x989C;&#x8272;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; #000000&#xFF09;
+            &quot;text-halo-color&quot;: &quot;rgba(0,0,0,0)&quot;, // &#x6587;&#x672C;&#x7684;&#x5149;&#x6655;&#x989C;&#x8272;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; rgba(0,0,0,0)&#xFF09;
+            &quot;text-halo-width&quot;: 0, // &#x6587;&#x672C;&#x7684;&#x5149;&#x6655;&#x5BBD;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 0&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#xFF09;
+            &quot;text-halo-blur&quot;: 0, // &#x6587;&#x672C;&#x7684;&#x5149;&#x6655;&#x6A21;&#x7CCA;&#x5BBD;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 0&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#xFF09;
+            &quot;text-translate&quot;: [0, 0], // &#x6587;&#x672C;&#x7684;&#x5E73;&#x79FB;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x901A;&#x8FC7;&#x5E73;&#x79FB; [x, y] &#x8FBE;&#x5230;&#x4E00;&#x5B9A;&#x7684;&#x504F;&#x79FB;&#x91CF;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; [0, 0]&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#x3002;&#xFF09;
+            &quot;text-translate-anchor&quot;: &quot;map&quot;, // &#x6587;&#x672C;&#x7684;&#x5E73;&#x79FB;&#x951A;&#x70B9;&#xFF0C;&#x5373;&#x76F8;&#x5BF9;&#x7684;&#x53C2;&#x8003;&#x7269;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; map&#x3001;viewport&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; map&#xFF09;
+        }
+    }
+]
+
+// line
+&quot;layers&quot;: [
+    {
+        &quot;id&quot;: &quot;line-id&quot;, // &#x552F;&#x4E00; id &#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;type&quot;: &quot;line&quot;, // &#x7C7B;&#x578B;&#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;metadata&quot;: { // &#x5143;&#x6570;&#x636E;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x4E8E;&#x4E3A; layer &#x9644;&#x52A0;&#x4EFB;&#x610F;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x4E3A;&#x907F;&#x514D;&#x51B2;&#x7A81;&#xFF0C;&#x5EFA;&#x8BAE;&#x6DFB;&#x52A0;&#x524D;&#x7F00;&#xFF0C;&#x5982; mapbox:&#xFF09;
+            &quot;mapbox:name&quot;: &quot;test&quot;
+        },
+        &quot;source&quot;: &quot;source-name&quot;, // &#x6570;&#x636E;&#x6E90;&#x7684;&#x540D;&#x79F0;&#xFF08;&#x9664;&#x4E86; layer &#x7684; type &#x4E3A; background &#x5916;&#xFF0C;source &#x5FC5;&#x586B;&#xFF09; 
+        &quot;source-layer&quot;: &quot;source-layer-name&quot;, // &#x6570;&#x636E;&#x6E90;&#x7684;&#x56FE;&#x5C42;&#xFF08;&#x53EA;&#x6709;&#x6570;&#x636E;&#x6E90; source &#x7684; type &#x4E3A; vector &#x65F6;&#xFF0C;&#x624D;&#x80FD;&#x8BBE;&#x7F6E; source-layer&#xFF0C;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x4E0D;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#xFF09;
+        &quot;minzoom&quot;: 0, // &#x6700;&#x5C0F;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5C0F;&#x4E8E;&#x6B64; minzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;maxzoom&quot;: 24, // &#x6700;&#x5927;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5927;&#x4E8E;&#x6B64; maxzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;filter&quot;: [], // &#x8FC7;&#x6EE4;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x7279;&#x5B9A;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8FC7;&#x6EE4;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x6E90;&#x7684;&#x8981;&#x7D20;&#x3002;&#x5177;&#x4F53;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8BE6;&#x89C1; expression&#xFF09;
+        &quot;layout&quot;: { // &#x5E03;&#x5C40;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;visibility&quot;: &quot;visible&quot;, // &#x53EF;&#x89C1;&#x6027;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; none&#x3001;visible&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; visible&#xFF09;
+            &quot;line-cap&quot;: &quot;butt&quot;, // &#x7EBF;&#x672B;&#x7AEF;&#x7684;&#x663E;&#x793A;&#x6837;&#x5F0F;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; butt&#x3001;round&#x3001;square&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; butt&#xFF09;
+            // --- butt&#xFF1A;&#x65B9;&#x578B;&#x672B;&#x7AEF;&#xFF08;&#x4EC5;&#x7ED8;&#x5236;&#x5230;&#x7EBF;&#x7684;&#x7AEF;&#x70B9;&#xFF09;
+            // --- round&#xFF1A;&#x5706;&#x578B;&#x672B;&#x7AEF;&#xFF08;&#x4EE5;&#x7EBF;&#x5BBD;&#x7684; 1/2 &#x4E3A;&#x534A;&#x5F84;&#xFF0C;&#x4EE5;&#x7EBF;&#x7684;&#x7AEF;&#x70B9;&#x4E3A;&#x5706;&#x5FC3;&#xFF0C;&#x7ED8;&#x5236;&#x5706;&#x578B;&#x7AEF;&#x70B9;&#xFF0C;&#x4F1A;&#x8D85;&#x51FA;&#x7EBF;&#x7684;&#x7AEF;&#x70B9;&#xFF09;
+            // --- square&#xFF1A;&#x65B9;&#x578B;&#x672B;&#x7AEF;&#xFF08;&#x4EE5;&#x7EBF;&#x5BBD;&#x7684; 1/2 &#x957F;&#x5EA6;&#x8D85;&#x51FA;&#x7EBF;&#x7684;&#x7AEF;&#x70B9;&#xFF09;
+            &quot;line-join&quot;: &quot;miter&quot;, // &#x7EBF;&#x4EA4;&#x53C9;&#x65F6;&#x7684;&#x663E;&#x793A;&#x6837;&#x5F0F;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; bevel&#x3001;round&#x3001;miter&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; miter&#xFF09;
+            // --- bevel&#xFF1A;&#x65B9;&#x578B;&#x4EA4;&#x70B9;&#xFF08;&#x4EE5;&#x7EBF;&#x5BBD;&#x7684; 1/2 &#x957F;&#x5EA6;&#x8D85;&#x51FA;&#x7EBF;&#x7684;&#x4EA4;&#x70B9;&#xFF09;
+            // --- round&#xFF1A;&#x5706;&#x578B;&#x4EA4;&#x70B9;&#xFF08;&#x4EE5;&#x7EBF;&#x5BBD;&#x7684; 1/2 &#x4E3A;&#x534A;&#x5F84;&#xFF0C;&#x4EE5;&#x7EBF;&#x7684;&#x4EA4;&#x70B9;&#x4E3A;&#x5706;&#x5FC3;&#xFF0C;&#x7ED8;&#x5236;&#x5706;&#x578B;&#x4EA4;&#x70B9;&#xFF0C;&#x4F1A;&#x8D85;&#x51FA;&#x7EBF;&#x7684;&#x4EA4;&#x70B9;&#xFF09;
+            // --- miter&#xFF1A;&#x5C16;&#x578B;&#x4EA4;&#x70B9;&#xFF08;&#x4EE5;&#x4E24;&#x7EBF;&#x6BB5;&#x7684;&#x5916;&#x6CBF;&#x76F8;&#x4EA4;&#xFF0C;&#x8D85;&#x51FA;&#x4EA4;&#x70B9;&#x7ED8;&#x5236;&#xFF09;
+            &quot;line-miter-limit&quot;: 2, // &#x6700;&#x5927;&#x659C;&#x63A5;&#x957F;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x6765;&#x5C06; miter &#x5C16;&#x578B;&#x4EA4;&#x70B9;&#x81EA;&#x52A8;&#x8F6C;&#x4E3A; bevel &#x65B9;&#x578B;&#x4EA4;&#x70B9;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 2&#x3002;&#x53EA;&#x6709; line-join &#x4E3A; miter &#x65F6;&#xFF0C;&#x624D;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x6B64;&#x5C5E;&#x6027;&#xFF09;
+            &quot;line-round-limit&quot;: 1.05, // &#x6700;&#x5C0F;&#x5706;&#x89D2;&#x534A;&#x5F84;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x6765;&#x5C06; round &#x5706;&#x578B;&#x4EA4;&#x70B9;&#x81EA;&#x52A8;&#x8F6C;&#x4E3A; miter &#x5C16;&#x578B;&#x4EA4;&#x70B9;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1.05&#x3002;&#x53EA;&#x6709; line-join &#x4E3A; round &#x65F6;&#xFF0C;&#x624D;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x6B64;&#x5C5E;&#x6027;&#xFF09;
+        },
+        &quot;paint&quot;: { // &#x7ED8;&#x5236;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;line-opacity&quot;: 1, // &#x7EBF;&#x7684;&#x4E0D;&#x900F;&#x660E;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1&#xFF09;
+            &quot;line-pattern&quot;: &quot;&quot;, // &#x7EBF;&#x7528;&#x7684;&#x56FE;&#x6848;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x8FD9;&#x91CC;&#x586B;&#x5199;&#x5728; sprite &#x96EA;&#x78A7;&#x56FE;&#x4E2D;&#x56FE;&#x6807;&#x540D;&#x79F0;&#x3002;&#x4E3A;&#x4E86;&#x56FE;&#x6848;&#x80FD;&#x65E0;&#x7F1D;&#x586B;&#x5145;&#xFF0C;&#x56FE;&#x6807;&#x7684;&#x9AD8;&#x5BBD;&#x9700;&#x8981;&#x662F; 2 &#x7684;&#x500D;&#x6570;&#xFF09;
+            &quot;line-color&quot;: &quot;#000000&quot;, // &#x7EBF;&#x7684;&#x989C;&#x8272;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; #000000&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86; line-pattern&#xFF0C;&#x5219; line-color &#x5C06;&#x65E0;&#x6548;&#xFF09;
+            &quot;line-translate&quot;: [0, 0], // &#x7EBF;&#x7684;&#x5E73;&#x79FB;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x901A;&#x8FC7;&#x5E73;&#x79FB; [x, y] &#x8FBE;&#x5230;&#x4E00;&#x5B9A;&#x7684;&#x504F;&#x79FB;&#x91CF;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; [0, 0]&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#x3002;&#xFF09;
+            &quot;line-translate-anchor&quot;: &quot;map&quot;, // &#x7EBF;&#x7684;&#x5E73;&#x79FB;&#x951A;&#x70B9;&#xFF0C;&#x5373;&#x76F8;&#x5BF9;&#x7684;&#x53C2;&#x8003;&#x7269;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; map&#x3001;viewport&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; map&#xFF09;
+            &quot;line-width&quot;: 1, // &#x7EBF;&#x7684;&#x5BBD;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 0&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#xFF09;
+            &quot;line-gap-width&quot;: 0, // &#x7EBF;&#x7684;&#x5916;&#x90E8;&#x95F4;&#x8DDD;&#x5BBD;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 0&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#x3002;&#x7528;&#x6765;&#x5728;&#x7EBF;&#x7684;&#x5916;&#x90E8;&#x518D;&#x7ED8;&#x5236;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x6B64;&#x503C;&#x8868;&#x793A;&#x5185;&#x95F4;&#x8DDD;&#xFF09;
+            &quot;line-offset&quot;: 0, // &#x7EBF;&#x7684;&#x504F;&#x79FB;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#x3002;&#x5BF9;&#x4E8E;&#x5355;&#x7EBF;&#xFF0C;&#x5219;&#x662F;&#x5411;&#x53F3;&#x7684;&#x504F;&#x79FB;&#x91CF;&#xFF1B;&#x5BF9;&#x4E8E;&#x591A;&#x8FB9;&#x5F62;&#xFF0C;&#x6B63;&#x503C;&#x4E3A;&#x5185;&#x7F29; inset&#xFF0C;&#x8D1F;&#x503C;&#x4E3A;&#x5916;&#x7A81; outset&#xFF09;
+            &quot;line-blur&quot;: 0, // &#x7EBF;&#x7684;&#x6A21;&#x7CCA;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 0&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#xFF09;
+            &quot;line-dasharray&quot;: [0, 0], // &#x865A;&#x7EBF;&#x7684;&#x7834;&#x6298;&#x53F7;&#x90E8;&#x5206;&#x548C;&#x95F4;&#x9694;&#x7684;&#x957F;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; [0, 0]&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86; line-pattern&#xFF0C;&#x5219; line-dasharray &#x5C06;&#x65E0;&#x6548;&#xFF09;
+            &quot;line-gradient&quot;: &quot;#000000&quot;, // &#x7EBF;&#x7684;&#x6E10;&#x53D8;&#x8272;&#xFF08;&#x53EF;&#x9009;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86; line-pattern &#x6216; line-dasharray&#xFF0C;&#x5219; line-gradient &#x5C06;&#x65E0;&#x6548;&#x3002;&#x53EA;&#x6709;&#x6570;&#x636E;&#x6E90; source &#x7684; type &#x4E3A; geojson &#xFF0C;&#x4E14; source &#x7684; lineMetrics &#x4E3A; true &#x65F6;&#xFF0C;line-gradient &#x624D;&#x6709;&#x6548;&#xFF09;
+        }
+    }
+]
+
+// fill
+&quot;layers&quot;: [
+    {
+        &quot;id&quot;: &quot;fill-id&quot;, // &#x552F;&#x4E00; id &#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;type&quot;: &quot;fill&quot;, // &#x7C7B;&#x578B;&#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;metadata&quot;: { // &#x5143;&#x6570;&#x636E;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x4E8E;&#x4E3A; layer &#x9644;&#x52A0;&#x4EFB;&#x610F;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x4E3A;&#x907F;&#x514D;&#x51B2;&#x7A81;&#xFF0C;&#x5EFA;&#x8BAE;&#x6DFB;&#x52A0;&#x524D;&#x7F00;&#xFF0C;&#x5982; mapbox:&#xFF09;
+            &quot;mapbox:name&quot;: &quot;test&quot;
+        },
+        &quot;source&quot;: &quot;source-name&quot;, // &#x6570;&#x636E;&#x6E90;&#x7684;&#x540D;&#x79F0;&#xFF08;&#x9664;&#x4E86; layer &#x7684; type &#x4E3A; background &#x5916;&#xFF0C;source &#x5FC5;&#x586B;&#xFF09; 
+        &quot;source-layer&quot;: &quot;source-layer-name&quot;, // &#x6570;&#x636E;&#x6E90;&#x7684;&#x56FE;&#x5C42;&#xFF08;&#x53EA;&#x6709;&#x6570;&#x636E;&#x6E90; source &#x7684; type &#x4E3A; vector &#x65F6;&#xFF0C;&#x624D;&#x80FD;&#x8BBE;&#x7F6E; source-layer&#xFF0C;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x4E0D;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#xFF09;
+        &quot;minzoom&quot;: 0, // &#x6700;&#x5C0F;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5C0F;&#x4E8E;&#x6B64; minzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;maxzoom&quot;: 24, // &#x6700;&#x5927;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5927;&#x4E8E;&#x6B64; maxzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;filter&quot;: [], // &#x8FC7;&#x6EE4;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x7279;&#x5B9A;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8FC7;&#x6EE4;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x6E90;&#x7684;&#x8981;&#x7D20;&#x3002;&#x5177;&#x4F53;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8BE6;&#x89C1; expression&#xFF09;
+        &quot;layout&quot;: { // &#x5E03;&#x5C40;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;visibility&quot;: &quot;visible&quot;, // &#x53EF;&#x89C1;&#x6027;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; none&#x3001;visible&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; visible&#xFF09;
+        },
+        &quot;paint&quot;: { // &#x7ED8;&#x5236;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;fill-antialias&quot;: true, // &#x586B;&#x5145;&#x65F6;&#x662F;&#x5426;&#x53CD;&#x952F;&#x9F7F;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; true&#xFF09;
+            &quot;fill-opacity&quot;: 1, // &#x586B;&#x5145;&#x7684;&#x4E0D;&#x900F;&#x660E;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1&#xFF09;
+            &quot;fill-pattern&quot;: &quot;&quot;, // &#x586B;&#x5145;&#x7528;&#x7684;&#x56FE;&#x6848;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x8FD9;&#x91CC;&#x586B;&#x5199;&#x5728; sprite &#x96EA;&#x78A7;&#x56FE;&#x4E2D;&#x56FE;&#x6807;&#x540D;&#x79F0;&#x3002;&#x4E3A;&#x4E86;&#x56FE;&#x6848;&#x80FD;&#x65E0;&#x7F1D;&#x586B;&#x5145;&#xFF0C;&#x56FE;&#x6807;&#x7684;&#x9AD8;&#x5BBD;&#x9700;&#x8981;&#x662F; 2 &#x7684;&#x500D;&#x6570;&#xFF09;
+            &quot;fill-color&quot;: &quot;#000000&quot;, // &#x586B;&#x5145;&#x7684;&#x989C;&#x8272;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; #000000&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86; fill-pattern&#xFF0C;&#x5219; fill-color &#x5C06;&#x65E0;&#x6548;&#xFF09;
+            &quot;fill-outline-color&quot;: &quot;#000000&quot;, // &#x63CF;&#x8FB9;&#x7684;&#x989C;&#x8272;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x548C; fill-color &#x4E00;&#x81F4;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86; fill-pattern&#xFF0C;&#x5219; fill-outline-color &#x5C06;&#x65E0;&#x6548;&#x3002;&#x4E3A;&#x4E86;&#x4F7F;&#x7528;&#x6B64;&#x5C5E;&#x6027;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x8BBE;&#x7F6E; fill-antialias &#x4E3A; true&#xFF09;
+            &quot;fill-translate&quot;: [0, 0], // &#x586B;&#x5145;&#x7684;&#x5E73;&#x79FB;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x901A;&#x8FC7;&#x5E73;&#x79FB; [x, y] &#x8FBE;&#x5230;&#x4E00;&#x5B9A;&#x7684;&#x504F;&#x79FB;&#x91CF;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; [0, 0]&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#x3002;&#xFF09;
+            &quot;fill-translate-anchor&quot;: &quot;map&quot; // &#x5E73;&#x79FB;&#x7684;&#x951A;&#x70B9;&#xFF0C;&#x5373;&#x76F8;&#x5BF9;&#x7684;&#x53C2;&#x8003;&#x7269;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; map&#x3001;viewport&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; map&#xFF09;
+        }
+    }
+]
+
+// fill-extrusion
+&quot;layers&quot;: [
+    {
+        &quot;id&quot;: &quot;fill-extrusion-id&quot;, // &#x552F;&#x4E00; id &#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;type&quot;: &quot;fill-extrusion&quot;, // &#x7C7B;&#x578B;&#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;metadata&quot;: { // &#x5143;&#x6570;&#x636E;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x4E8E;&#x4E3A; layer &#x9644;&#x52A0;&#x4EFB;&#x610F;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x4E3A;&#x907F;&#x514D;&#x51B2;&#x7A81;&#xFF0C;&#x5EFA;&#x8BAE;&#x6DFB;&#x52A0;&#x524D;&#x7F00;&#xFF0C;&#x5982; mapbox:&#xFF09;
+            &quot;mapbox:name&quot;: &quot;test&quot;
+        },
+        &quot;source&quot;: &quot;source-name&quot;, // &#x6570;&#x636E;&#x6E90;&#x7684;&#x540D;&#x79F0;&#xFF08;&#x9664;&#x4E86; layer &#x7684; type &#x4E3A; background &#x5916;&#xFF0C;source &#x5FC5;&#x586B;&#xFF09; 
+        &quot;source-layer&quot;: &quot;source-layer-name&quot;, // &#x6570;&#x636E;&#x6E90;&#x7684;&#x56FE;&#x5C42;&#xFF08;&#x53EA;&#x6709;&#x6570;&#x636E;&#x6E90; source &#x7684; type &#x4E3A; vector &#x65F6;&#xFF0C;&#x624D;&#x80FD;&#x8BBE;&#x7F6E; source-layer&#xFF0C;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x4E0D;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#xFF09;
+        &quot;minzoom&quot;: 0, // &#x6700;&#x5C0F;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5C0F;&#x4E8E;&#x6B64; minzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;maxzoom&quot;: 24, // &#x6700;&#x5927;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5927;&#x4E8E;&#x6B64; maxzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;filter&quot;: [], // &#x8FC7;&#x6EE4;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x7279;&#x5B9A;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8FC7;&#x6EE4;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x6E90;&#x7684;&#x8981;&#x7D20;&#x3002;&#x5177;&#x4F53;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8BE6;&#x89C1; expression&#xFF09;
+        &quot;layout&quot;: { // &#x5E03;&#x5C40;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;visibility&quot;: &quot;visible&quot;, // &#x53EF;&#x89C1;&#x6027;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; none&#x3001;visible&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; visible&#xFF09;
+        },
+        &quot;paint&quot;: { // &#x7ED8;&#x5236;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;fill-extrusion-opacity&quot;: 1, // &#x4E09;&#x7EF4;&#x586B;&#x5145;&#x7684;&#x4E0D;&#x900F;&#x660E;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1&#xFF09;
+            &quot;fill-extrusion-pattern&quot;: &quot;&quot;, // &#x4E09;&#x7EF4;&#x586B;&#x5145;&#x7684;&#x56FE;&#x6848;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x8FD9;&#x91CC;&#x586B;&#x5199;&#x5728; sprite &#x96EA;&#x78A7;&#x56FE;&#x4E2D;&#x56FE;&#x6807;&#x540D;&#x79F0;&#x3002;&#x4E3A;&#x4E86;&#x56FE;&#x6848;&#x80FD;&#x65E0;&#x7F1D;&#x586B;&#x5145;&#xFF0C;&#x56FE;&#x6807;&#x7684;&#x9AD8;&#x5BBD;&#x9700;&#x8981;&#x662F; 2 &#x7684;&#x500D;&#x6570;&#xFF09;
+            &quot;fill-extrusion-color&quot;: &quot;#000000&quot;, // &#x4E09;&#x7EF4;&#x586B;&#x5145;&#x7684;&#x989C;&#x8272;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; #000000&#xFF09;
+            &quot;fill-extrusion-translate&quot;: [0, 0], // &#x4E09;&#x7EF4;&#x586B;&#x5145;&#x7684;&#x5E73;&#x79FB;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x901A;&#x8FC7;&#x5E73;&#x79FB; [x, y] &#x8FBE;&#x5230;&#x4E00;&#x5B9A;&#x7684;&#x504F;&#x79FB;&#x91CF;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; [0, 0]&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x50CF;&#x7D20;&#x3002;&#xFF09;
+            &quot;fill-extrusion-translate-anchor&quot;: &quot;map&quot;, // &#x5E73;&#x79FB;&#x7684;&#x951A;&#x70B9;&#xFF0C;&#x5373;&#x76F8;&#x5BF9;&#x7684;&#x53C2;&#x8003;&#x7269;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; map&#x3001;viewport&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; map&#xFF09;
+            &quot;fill-extrusion-height&quot;: 0, // &#x4E09;&#x7EF4;&#x586B;&#x5145;&#x7684;&#x9AD8;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 0&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x7C73;&#xFF09;
+            &quot;fill-extrusion-base&quot;: 0, // &#x4E09;&#x7EF4;&#x586B;&#x5145;&#x7684;&#x5E95;&#x90E8;&#x9AD8;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x503C; &gt;= 0&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x7C73;&#x3002;&#x503C;&#x5FC5;&#x987B;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E; fill-extrusion-height&#xFF09;
+            &quot;fill-extrusion-vertical-gradient&quot;: true, // &#x662F;&#x5426;&#x5F00;&#x542F;&#x5782;&#x76F4;&#x6E10;&#x53D8;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; true&#xFF09;
+        }
+    }
+]
+
+// background
+&quot;layers&quot;: [
+    {
+        &quot;id&quot;: &quot;background-id&quot;, // &#x552F;&#x4E00; id &#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;type&quot;: &quot;background&quot;, // &#x7C7B;&#x578B;&#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;metadata&quot;: { // &#x5143;&#x6570;&#x636E;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x4E8E;&#x4E3A; layer &#x9644;&#x52A0;&#x4EFB;&#x610F;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x4E3A;&#x907F;&#x514D;&#x51B2;&#x7A81;&#xFF0C;&#x5EFA;&#x8BAE;&#x6DFB;&#x52A0;&#x524D;&#x7F00;&#xFF0C;&#x5982; mapbox:&#xFF09;
+            &quot;mapbox:name&quot;: &quot;test&quot;
+        },
+        &quot;minzoom&quot;: 0, // &#x6700;&#x5C0F;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5C0F;&#x4E8E;&#x6B64; minzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;maxzoom&quot;: 24, // &#x6700;&#x5927;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5927;&#x4E8E;&#x6B64; maxzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;layout&quot;: { // &#x5E03;&#x5C40;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;visibility&quot;: &quot;visible&quot;, // &#x53EF;&#x89C1;&#x6027;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; none&#x3001;visible&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; visible&#xFF09;
+        },
+        &quot;paint&quot;: { // &#x7ED8;&#x5236;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;background-color&quot;: &quot;#000000&quot;, // &#x80CC;&#x666F;&#x989C;&#x8272;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; #000000&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86; background-pattern&#xFF0C;&#x5219; background-color &#x5C06;&#x65E0;&#x6548;&#xFF09;
+            &quot;background-pattern&quot;: &quot;&quot;, // &#x80CC;&#x666F;&#x56FE;&#x6848;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x8FD9;&#x91CC;&#x586B;&#x5199;&#x5728; sprite &#x96EA;&#x78A7;&#x56FE;&#x4E2D;&#x56FE;&#x6807;&#x540D;&#x79F0;&#x3002;&#x4E3A;&#x4E86;&#x80CC;&#x666F;&#x56FE;&#x6848;&#x80FD;&#x65E0;&#x7F1D;&#x586B;&#x5145;&#xFF0C;&#x56FE;&#x6807;&#x7684;&#x9AD8;&#x5BBD;&#x9700;&#x8981;&#x662F; 2 &#x7684;&#x500D;&#x6570;&#xFF09;
+            &quot;background-opacity&quot;: 1 // &#x80CC;&#x666F;&#x4E0D;&#x900F;&#x660E;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1&#xFF09; 
+        }
+    }
+]
+
+// raster
+[
+    {
+        &quot;id&quot;: &quot;raster-id&quot;, // &#x552F;&#x4E00; id &#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;type&quot;: &quot;raster&quot;, // &#x7C7B;&#x578B;&#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;metadata&quot;: { // &#x5143;&#x6570;&#x636E;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x4E8E;&#x4E3A; layer &#x9644;&#x52A0;&#x4EFB;&#x610F;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x4E3A;&#x907F;&#x514D;&#x51B2;&#x7A81;&#xFF0C;&#x5EFA;&#x8BAE;&#x6DFB;&#x52A0;&#x524D;&#x7F00;&#xFF0C;&#x5982; mapbox:&#xFF09;
+            &quot;mapbox:name&quot;: &quot;test&quot;
+        },
+        &quot;source&quot;: &quot;source-name&quot;, // &#x6570;&#x636E;&#x6E90;&#x7684;&#x540D;&#x79F0;&#xFF08;&#x9664;&#x4E86; layer &#x7684; type &#x4E3A; background &#x5916;&#xFF0C;source &#x5FC5;&#x586B;&#xFF09; 
+        &quot;source-layer&quot;: &quot;source-layer-name&quot;, // &#x6570;&#x636E;&#x6E90;&#x7684;&#x56FE;&#x5C42;&#xFF08;&#x53EA;&#x6709;&#x6570;&#x636E;&#x6E90; source &#x7684; type &#x4E3A; vector &#x65F6;&#xFF0C;&#x624D;&#x80FD;&#x8BBE;&#x7F6E; source-layer&#xFF0C;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x4E0D;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#xFF09;
+        &quot;minzoom&quot;: 0, // &#x6700;&#x5C0F;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5C0F;&#x4E8E;&#x6B64; minzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;maxzoom&quot;: 24, // &#x6700;&#x5927;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5927;&#x4E8E;&#x6B64; maxzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;filter&quot;: [], // &#x8FC7;&#x6EE4;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x7279;&#x5B9A;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8FC7;&#x6EE4;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x6E90;&#x7684;&#x8981;&#x7D20;&#x3002;&#x5177;&#x4F53;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8BE6;&#x89C1; expression&#xFF09;
+        &quot;layout&quot;: { // &#x5E03;&#x5C40;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;visibility&quot;: &quot;visible&quot;, // &#x53EF;&#x89C1;&#x6027;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; none&#x3001;visible&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; visible&#xFF09;
+        },
+        &quot;paint&quot;: { // &#x7ED8;&#x5236;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;raster-opacity&quot;: 1, // &#x56FE;&#x7247;&#x7684;&#x4E0D;&#x900F;&#x660E;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1&#xFF09;
+            &quot;raster-hue-rotate&quot;: 0, // &#x5728;&#x8272;&#x8F6E;&#x4E0A;&#x65CB;&#x8F6C;&#x8272;&#x76F8;&#x7684;&#x89D2;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x89D2;&#x5EA6;&#xFF09;
+            &quot;raster-brightness-min&quot;: 0, // &#x56FE;&#x7247;&#x7684;&#x6700;&#x5C0F;&#x4EAE;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF09;
+            &quot;raster-brightness-max&quot;: 1, // &#x56FE;&#x7247;&#x7684;&#x6700;&#x5927;&#x4EAE;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1&#xFF09;
+            &quot;raster-saturation&quot;: 0, // &#x56FE;&#x7247;&#x7684;&#x9971;&#x548C;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; -1 ~ 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF09;
+            &quot;raster-contrast&quot;: 0, // &#x56FE;&#x7247;&#x7684;&#x5BF9;&#x6BD4;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; -1 ~ 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF09;
+            &quot;raster-resampling&quot;: &quot;linear&quot;, // &#x91C7;&#x6837;&#x65B9;&#x5F0F;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; linear&#x3001;nearest&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; linear&#xFF09; 
+            &quot;raster-fade-duration&quot;: 300 // &#x5207;&#x6362;&#x74E6;&#x7247;&#x65F6;&#x7684;&#x6E10;&#x9690;&#x65F6;&#x95F4;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 300&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x6BEB;&#x79D2;&#xFF09;
+        }
+    }
+]
+
+// hillshade
+&quot;layers&quot;: [
+    {
+        &quot;id&quot;: &quot;hillshade-id&quot;, // &#x552F;&#x4E00; id &#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;type&quot;: &quot;hillshade&quot;, // &#x7C7B;&#x578B;&#xFF08;&#x5FC5;&#x586B;&#xFF09;
+        &quot;metadata&quot;: { // &#x5143;&#x6570;&#x636E;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x4E8E;&#x4E3A; layer &#x9644;&#x52A0;&#x4EFB;&#x610F;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x4E3A;&#x907F;&#x514D;&#x51B2;&#x7A81;&#xFF0C;&#x5EFA;&#x8BAE;&#x6DFB;&#x52A0;&#x524D;&#x7F00;&#xFF0C;&#x5982; mapbox:&#xFF09;
+            &quot;mapbox:name&quot;: &quot;test&quot;
+        },
+        &quot;source&quot;: &quot;source-name&quot;, // &#x6570;&#x636E;&#x6E90;&#x7684;&#x540D;&#x79F0;&#xFF08;&#x9664;&#x4E86; layer &#x7684; type &#x4E3A; background &#x5916;&#xFF0C;source &#x5FC5;&#x586B;&#xFF09; 
+        &quot;source-layer&quot;: &quot;source-layer-name&quot;, // &#x6570;&#x636E;&#x6E90;&#x7684;&#x56FE;&#x5C42;&#xFF08;&#x53EA;&#x6709;&#x6570;&#x636E;&#x6E90; source &#x7684; type &#x4E3A; vector &#x65F6;&#xFF0C;&#x624D;&#x80FD;&#x8BBE;&#x7F6E; source-layer&#xFF0C;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x4E0D;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#xFF09;
+        &quot;minzoom&quot;: 0, // &#x6700;&#x5C0F;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5C0F;&#x4E8E;&#x6B64; minzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;maxzoom&quot;: 24, // &#x6700;&#x5927;&#x5C42;&#x7EA7;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 24&#x3002;&#x5F53; style &#x7684; zoom &#x5927;&#x4E8E;&#x6B64; maxzoom &#x65F6;&#xFF0C;layer &#x5C06;&#x88AB;&#x9690;&#x85CF;&#xFF09;
+        &quot;filter&quot;: [], // &#x8FC7;&#x6EE4;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x7528;&#x7279;&#x5B9A;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8FC7;&#x6EE4;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x6E90;&#x7684;&#x8981;&#x7D20;&#x3002;&#x5177;&#x4F53;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8BE6;&#x89C1; expression&#xFF09;
+        &quot;layout&quot;: { // &#x5E03;&#x5C40;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;visibility&quot;: &quot;visible&quot;, // &#x53EF;&#x89C1;&#x6027;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; none&#x3001;visible&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; visible&#xFF09;
+        },
+        &quot;paint&quot;: { // &#x7ED8;&#x5236;&#x7C7B;&#x5C5E;&#x6027;
+            &quot;hillshade-illumination-direction&quot;: 335, // &#x5149;&#x7167;&#x7684;&#x65B9;&#x5411;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 359&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 335&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x89D2;&#x5EA6;&#xFF09;
+            &quot;hillshade-illumination-anchor&quot;: &quot;viewport&quot;, // &#x5149;&#x7167;&#x7684;&#x951A;&#x70B9;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; map&#x3001;viewport&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; viewport&#xFF09;
+            &quot;hillshade-exaggeration&quot;: 0.5, // &#x9634;&#x5F71;&#x7684;&#x5F3A;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0 ~ 1&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0.5&#xFF09;
+            &quot;hillshade-shadow-color&quot;: &quot;#000000&quot;, // &#x9634;&#x5F71;&#x7684;&#x989C;&#x8272;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; #000000&#xFF09;
+            &quot;hillshade-highlight-color&quot;: &quot;#ffffff&quot;, // &#x5149;&#x7167;&#x90E8;&#x5206;&#x7684;&#x989C;&#x8272;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; #ffffff&#xFF09;
+            &quot;hillshade-accent-color&quot;: &quot;#000000&quot; // &#x7528;&#x4E8E;&#x5F3A;&#x8C03;&#x5730;&#x5F62;&#x7684;&#x989C;&#x8272;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; #000000&#xFF09;
+        }
+    }
+]
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</li>
+</ul>
+<pre class="language-"><code>// &#x6B64;&#x5904;&#x7684;id&#x4E3A;&#x56FE;&#x5C42;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x9700;&#x8981;&#x6709;&#x552F;&#x4E00;&#x6027;&#x3002;
+map.addLayer(option) // &#x8BBE;&#x7F6E;&#x56FE;&#x5C42;
+map.getLayer(&apos;id&apos;) // &#x83B7;&#x53D6;&#x56FE;&#x5C42;
+map.removeLayer(&apos;id&apos;) // &#x5220;&#x9664;&#x56FE;&#x5C42;
+</code></pre><h1 id="&#x6CE8;&#x610F;&#x4E8B;&#x9879;">&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h1>
+<ul>
+<li>&#x8BBE;&#x7F6E;&#x56FE;&#x5C42;&#x65F6;&#x5E94;&#x5148;&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x6E90;&#x518D;&#x8BBE;&#x7F6E;&#x56FE;&#x5C42;&#xFF0C;&#x5220;&#x9664;&#x65F6;&#x5E94;&#x5148;&#x5220;&#x9664;&#x56FE;&#x5C42;&#x518D;&#x5220;&#x9664;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x5176;&#x4E2D;symbol&#x8BBE;&#x7F6E;&#x81EA;&#x5B9A;&#x4E49;&#x56FE;&#x6807;&#x8FD8;&#x9700;&#x8981;&#x5148;&#x914D;&#x7F6E;&#x56FE;&#x7247;&#x6E90;&#xFF0C;&#x5220;&#x9664;&#x65F6;&#x4E5F;&#x662F;&#x8981;&#x5148;&#x5220;&#x9664;&#x56FE;&#x5C42;&#x624D;&#x80FD;&#x5220;&#x9664;&#x56FE;&#x7247;&#x6E90;&#x3002;</li>
+</ul>
+<pre class="language-"><code>// &#x56FE;&#x7247;&#x6E90;&#x8BBE;&#x7F6E;&#xFF08;&#x4F7F;&#x7528;&#x65F6;symbol&#x56FE;&#x5C42;&#x91CC;&#x9762;&#x7684;icon-image&#x4E0E;name&#x5BF9;&#x5E94;&#x5373;&#x53EF;&#xFF09;
+map.addImage(&apos;name&apos;,imageUrl) // &#x6DFB;&#x52A0;&#x56FE;&#x7247;&#x6E90;
+map.hasImage(&apos;name&apos;) // &#x662F;&#x5426;&#x5B58;&#x5728;&#x56FE;&#x7247;&#x6E90;
+map.removeImage(&apos;name&apos;) // &#x5220;&#x9664;&#x56FE;&#x7247;&#x6E90;
+
+// &#x8FD9;&#x91CC;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x5F02;&#x6B65;&#x8BBE;&#x7F6E;&#x65B9;&#x6CD5;
+map.loadImage(
+    imageUrl,
+    (error, image) =&gt; {
+        if (error) throw error
+        resizeImageBitmap(image, 22, 22).then((resizedBitmap) =&gt; {
+            map.addImage(&apos;name&apos;, resizedBitmap)
+        })
+    }
+)
+// resizeImageBitmap&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x56FE;&#x7247;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x5F00;&#x53D1;&#x4E2D;&#x5F88;&#x591A;&#x56FE;&#x5C42;&#x7684;&#x65F6;&#x5019;&#x8BBE;&#x7F6E;&#x56FE;&#x4F8B;&#x5982;&#x679C;&#x4E0D;&#x53BB;&#x63A7;&#x5236;&#x539F;&#x59CB;&#x56FE;&#x7247;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4E0D;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x914D;&#x7F6E;&#x81EA;&#x5DF1;&#x60F3;&#x8981;&#x7684;&#x5927;&#x5C0F;
+resizeImageBitmap (bitmap, newWidth, newHeight) {
+    const canvas = new OffscreenCanvas(newWidth, newHeight);
+    const ctx = canvas.getContext(&apos;2d&apos;)
+
+    // &#x5C06;ImageBitmap&#x7ED8;&#x5236;&#x5230;canvas&#x4E0A;&#xFF0C;&#x5E76;&#x8C03;&#x6574;&#x5927;&#x5C0F;
+    ctx.drawImage(bitmap, 0, 0, newWidth, newHeight)
+
+    // &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;ImageBitmap
+    return createImageBitmap(canvas)
+}
+</code></pre><ul>
+<li><p>&#x6837;&#x5F0F;&#x5982;&#x679C;&#x9700;&#x8981;&#x591A;&#x6837;&#x6027;&#x53EF;&#x4EE5;&#x7528;mapbox&#x8868;&#x8FBE;&#x5F0F;&#x53BB;&#x5199;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x591A;&#x63CF;&#x8FF0;&#xFF0C;&#x540E;&#x9762;&#x5355;&#x72EC;&#x8BB2;&#x3002;</p>
+</li>
+<li><p>&#x5199;&#x70B9;&#x51FB;&#x60AC;&#x505C;&#x7684;&#x56FE;&#x5C42;&#x6837;&#x5F0F;&#x65F6;&#x6700;&#x597D;&#x4F7F;&#x7528;&#x8986;&#x76D6;&#x56FE;&#x5C42;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x56E0;&#x4E3A;&#x7EBF;&#x56FE;&#x5C42;&#xFF0C;&#x9762;&#x56FE;&#x5C42;&#x91CC;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5C42;&#x7EA7;&#x6CA1;&#x529E;&#x6CD5;&#x53BB;&#x8BBE;&#x7F6E;&#x6539;&#x53D8;&#xFF0C;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x6709;&#x91CD;&#x53E0;&#xFF0C;&#x5F53;&#x60AC;&#x505C;&#x7684;&#x662F;&#x4E0B;&#x9762;&#x7684;&#x90A3;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x6548;&#x679C;&#x4F1A;&#x88AB;&#x8986;&#x76D6;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x5143;&#x7D20;&#x906E;&#x76D6;&#x3002; </p>
+</li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; lujiannb@qq.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2024-06-03 17:33:54
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="创建一个新地图.html" class="navigation navigation-prev " aria-label="Previous page: 创建一个新地图">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Mapbox常用表达式.html" class="navigation navigation-next " aria-label="Next page: Mapbox常用表达式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据源和图层配置","level":"1.6.3","depth":2,"next":{"title":"Mapbox常用表达式","level":"1.6.4","depth":2,"path":"超图（MapboxGL）/Mapbox常用表达式.md","ref":"超图（MapboxGL）/Mapbox常用表达式.md","articles":[]},"previous":{"title":"创建一个新地图","level":"1.6.2","depth":2,"path":"超图（MapboxGL）/创建一个新地图.md","ref":"超图（MapboxGL）/创建一个新地图.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","back-to-top-button","chapter-fold","splitter","lightbox","custom-favicon","tbfed-pagefooter","hide-element","-lunr","-search","-sharing","sharing-plus","search-pro","-highlight","prism","hide-element","code","donate"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy lujiannb@qq.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{},"disqus":{"shortName":"gitbookuse"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"https://i.postimg.cc/vB86gftt/zhi-pay.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://i.postimg.cc/yY29QJ77/wei-pay.png","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./img/user.ico","lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":false,"all":["douban","facebook","google","weibo","qq","qzone","pocket","stumbleupon","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"./img/user.jpg","style":"background: none; max-height: 30px; min-height: 30px"},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"超图（MapboxGL）/数据源和图层配置.md","mtime":"2024-06-03T09:33:54.348Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-06-03T09:34:39.648Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
