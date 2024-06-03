@@ -89,6 +89,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="点线面创建及更新Source来实现图层数据的新增、修改、删除.html" />
+    
     
     <link rel="prev" href="数据源和图层配置.html" />
     
@@ -495,6 +497,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6.5" data-path="点线面创建及更新Source来实现图层数据的新增、修改、删除.html">
+            
+                <a href="点线面创建及更新Source来实现图层数据的新增、修改、删除.html">
+            
+                    
+                    点线面创建及更新Source来实现图层数据的新增、修改、删除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="地图事件,定位，创建信息窗体.html">
+            
+                <a href="地图事件,定位，创建信息窗体.html">
+            
+                    
+                    地图事件,定位，创建信息窗体
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -732,8 +760,142 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <footer class="page-footer"><span class="copyright">Copyright &#xA9; lujiannb@qq.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2024-06-03 17:33:54
+                                <h1 id="&#x8868;&#x8FBE;&#x5F0F;">&#x8868;&#x8FBE;&#x5F0F;</h1>
+<ul>
+<li>!, !=, &lt;, &lt;=, ==, &gt;, &gt;=&#xFF08;&#x9AD8;&#x9891;&#x7387;&#x4F7F;&#x7528;&#xFF09;</li>
+</ul>
+<pre class="language-"><code>// &#x8BED;&#x6CD5;
+[&quot;!&quot;, boolean]: boolean
+[&quot;!=&quot;, value, value]: boolean
+[&quot;&lt;&quot;, value, value]: boolean
+[&quot;&lt;=&quot;, value, value]: boolean
+[&quot;==&quot;, value, value]: boolean
+[&quot;&gt;&quot;, value, value]: boolean
+[&quot;&gt;=&quot;, value, value]: boolean
+</code></pre><ul>
+<li>all &#x903B;&#x8F91;&#x4E0E;&#xFF08;&#x9AD8;&#x9891;&#x7387;&#x4F7F;&#x7528;&#xFF09;</li>
+</ul>
+<pre class="language-"><code>// &#x8BED;&#x6CD5;
+[&quot;all&quot;, boolean, boolean]: boolean
+
+// &#x5E38;&#x7528;&#x4E8E;&#x56FE;&#x5C42;&#x8FC7;&#x6EE4;
+&apos;filter&apos;: [
+    &apos;all&apos;,
+    [&apos;==&apos;, &apos;extrude&apos;, &apos;true&apos;],
+    [&apos;&gt;&apos;, &apos;height&apos;, 5],
+    [&apos;&lt;=&apos;, &apos;height&apos;, 3]
+] // &#x7B5B;&#x9009;&#x51FA;&#x56FE;&#x5C42;&#x91CC;&#x6570;&#x636E;extrude&#x4E3A;true,height&gt;5&#x4E14;height&lt;=3&#x7684;&#x5143;&#x7D20;
+</code></pre><ul>
+<li>any &#x903B;&#x8F91;&#x6216;</li>
+</ul>
+<pre class="language-"><code>// &#x8BED;&#x6CD5;
+[&quot;any&quot;, boolean, boolean]: boolean
+</code></pre><ul>
+<li>case &#x6761;&#x4EF6; &#xFF08;&#x9AD8;&#x9891;&#x7387;&#x4F7F;&#x7528;&#xFF09;</li>
+</ul>
+<pre class="language-"><code>// &#x8BED;&#x6CD5;
+[&quot;case&quot;,
+    condition: boolean, output: OutputType,
+    condition: boolean, output: OutputType,
+    ...,
+    fallback: OutputType
+]: OutputType
+
+&apos;paint&apos;: {
+    &apos;fill-opacity&apos;: [
+        &apos;case&apos;,
+        [&apos;boolean&apos;, [&apos;feature-state&apos;, &apos;hover&apos;], false],
+        1,
+        0.5
+    ]
+} // &#x56FE;&#x5C42;&#x900F;&#x660E;&#x5EA6;&#x9ED8;&#x8BA4;&#x4E3A;0.5&#xFF0C;&#x60AC;&#x505C;&#x72B6;&#x6001;&#x4E3A;1
+</code></pre><ul>
+<li>match &#xFF08;&#x9AD8;&#x9891;&#x7387;&#x4F7F;&#x7528;&#xFF09;</li>
+</ul>
+<pre class="language-"><code>// &#x8BED;&#x6CD5;
+[&quot;match&quot;,
+    input: InputType (number or string),
+    label: InputType | [InputType, InputType, ...], output: OutputType,
+    label: InputType | [InputType, InputType, ...], output: OutputType,
+    ...,
+    fallback: OutputType
+]: OutputType
+
+// &#x5355;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;
+&apos;paint&apos;: {
+    &apos;color&apos;: [
+      &apos;1&#x53F7;&#x7EBF;&apos;, [&apos;case&apos;, [&apos;boolean&apos;, [&apos;feature-state&apos;, &apos;hover&apos;], false], &apos;blue&apos;, [&apos;boolean&apos;, [&apos;feature-state&apos;, &apos;click&apos;], false], &apos;blue&apos;, &apos;#f61c13&apos;],
+      &apos;2&#x53F7;&#x7EBF;&apos;, [&apos;case&apos;, [&apos;boolean&apos;, [&apos;feature-state&apos;, &apos;hover&apos;], false], &apos;blue&apos;, [&apos;boolean&apos;, [&apos;feature-state&apos;, &apos;click&apos;], false], &apos;blue&apos;, &apos;#efa573&apos;],
+      &apos;&#x5730;&#x94C1;&#x4E09;&#x53F7;&#x7EBF;&apos;, [&apos;case&apos;, [&apos;boolean&apos;, [&apos;feature-state&apos;, &apos;hover&apos;], false], &apos;blue&apos;, [&apos;boolean&apos;, [&apos;feature-state&apos;, &apos;click&apos;], false], &apos;blue&apos;, &apos;#f9a81a&apos;],
+      [&apos;case&apos;, [&apos;boolean&apos;, [&apos;feature-state&apos;, &apos;hover&apos;], false], &apos;blue&apos;, [&apos;boolean&apos;, [&apos;feature-state&apos;, &apos;click&apos;], false], &apos;blue&apos;, &apos;blue&apos;]
+    ]
+}
+</code></pre><ul>
+<li>interpolate&#xFF08;&#x9AD8;&#x9891;&#x7387;&#x4F7F;&#x7528;&#xFF09;</li>
+</ul>
+<p><strong>&#x5E38;&#x89C1;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E3A;&#x70ED;&#x529B;&#x56FE;&#x3001;&#x8F68;&#x8FF9;&#x56FE;&#x3001;&#x6A21;&#x578B;&#x7F51;&#x683C;&#x6E32;&#x67D3;&#x7B49;&#xFF0C;&#x70ED;&#x529B;&#x56FE;&#x4E2D;&#x4E3A;heatmap-density&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8F68;&#x8FF9;&#x7EBF;&#x4E2D;&#x4E3A;line-progress&#x8868;&#x8FBE;&#x5F0F;</strong></p>
+<pre class="language-"><code>// &#x8BED;&#x6CD5;
+[&quot;interpolate&quot;,
+    interpolation: [&quot;linear&quot;] | [&quot;exponential&quot;, base] | [&quot;cubic-bezier&quot;, x1, y1, x2, y2],
+    input: number,
+    stop_input_1: number, stop_output_1: OutputType,
+    stop_input_n: number, stop_output_n: OutputType, ...
+]: OutputType (number, array<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span>, or Color)
+
+// [&quot;linear&quot;]: &#x5728;&#x7565;&#x5C0F;&#x4E8E;&#x6216;&#x5927;&#x4E8E;&#x8F93;&#x5165;&#x7684;&#x4E24;&#x4E2A;&#x7AEF;&#x70B9;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x7EBF;&#x6027;&#x5185;&#x63D2;&#x3002;
+// [&quot;exponential&quot;, base]: &#x5728;&#x4E24;&#x4E2A;&#x7AEF;&#x70B9;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x6307;&#x6570;&#x63D2;&#x503C;&#xFF0C;&#x7565;&#x5927;&#x4E8E;&#x6216;&#x5C0F;&#x4E8E;&#x8F93;&#x5165;&#x503C;&#x3002;base&#x63A7;&#x5236;&#x8F93;&#x51FA;&#x589E;&#x52A0;&#x7684;&#x901F;&#x7387;:&#x503C;&#x8D8A;&#x9AD8;&#xFF0C;&#x8F93;&#x51FA;&#x8D8A;&#x63A5;&#x8FD1;&#x8303;&#x56F4;&#x7684;&#x9AD8;&#x7AEF;&#x3002;&#x5F53;&#x503C;&#x63A5;&#x8FD1;1&#x65F6;&#xFF0C;&#x8F93;&#x51FA;&#x7EBF;&#x6027;&#x589E;&#x52A0;&#x3002;
+// [&quot;cubic-bezier&quot;, x1, y1, x2, y2]: &#x4F7F;&#x7528;&#x7531;&#x7ED9;&#x5B9A;&#x63A7;&#x5236;&#x70B9;&#x5B9A;&#x4E49;&#x7684;&#x4E09;&#x6B21;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;&#x8FDB;&#x884C;&#x63D2;&#x503C;&#x3002;
+&apos;heatmap-color&apos;: [//&#x70ED;&#x529B;&#x56FE;&#x989C;&#x8272;
+    &apos;interpolate&apos;,
+    [&apos;linear&apos;],
+    [&apos;heatmap-density&apos;],
+    0,&apos;rgba(255,255,255,0)&apos;,
+    0.2,&apos;rgb(0,0,255)&apos;,
+    0.4, &apos;rgb(117,211,248)&apos;,
+    0.6, &apos;rgb(0, 255, 0)&apos;,
+    0.8, &apos;rgb(255, 234, 0)&apos;,
+    1, &apos;rgb(255,0,0)&apos;,
+] // &#x5BC6;&#x5EA6;&#x4E3A;0&#x6216;&#x5C0F;&#x4E8E;0&#xFF0C;&#x8F93;&#x51FA;&#x989C;&#x8272;&apos;rgba(255,255,255,0)&apos;&#xFF0C;&#x5BC6;&#x5EA6;&#x4E3A;0-0.2&#xFF0C;&#x8F93;&#x51FA;&#x989C;&#x8272;&#x5728;&apos;rgba(255,255,255,0)&apos;&#x548C;&apos;rgb(0,0,255)&apos;&#x4E4B;&#x95F4;&#xFF0C;&#x5BC6;&#x5EA6;&#x4E3A;0.2&#xFF0C;&#x8F93;&#x51FA;&#x989C;&#x8272;&apos;rgb(0,0,255)&apos;
+</code></pre><ul>
+<li>step&#xFF08;&#x9AD8;&#x9891;&#x7387;&#x4F7F;&#x7528;&#xFF09;</li>
+</ul>
+<p><strong>&#x901A;&#x8FC7;&#x8BA1;&#x7B97;&#x7531;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x503C;(&#x201C;&#x505C;&#x6B62;&#x201D;)&#x5BF9;&#x5B9A;&#x4E49;&#x7684;&#x5206;&#x6BB5;&#x5E38;&#x6570;&#x51FD;&#x6570;&#xFF0C;&#x4EA7;&#x751F;&#x79BB;&#x6563;&#x7684;&#x3001;&#x9636;&#x68AF;&#x5F0F;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x8F93;&#x5165;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x6570;&#x5B57;&#x8868;&#x8FBE;&#x5F0F;(&#x4F8B;&#x5982;&#xFF0C;[&quot;get&quot;&#xFF0C; &quot;population&quot;])&#x3002;&#x505C;&#x6B62;&#x8F93;&#x5165;&#x5FC5;&#x987B;&#x662F;&#x4E25;&#x683C;&#x5347;&#x5E8F;&#x7684;&#x6570;&#x5B57;&#x6587;&#x5B57;&#x3002;&#x8FD4;&#x56DE;&#x4EC5;&#x5C0F;&#x4E8E;&#x8F93;&#x5165;&#x7684;stop&#x7684;&#x8F93;&#x51FA;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x8F93;&#x5165;&#x5C0F;&#x4E8E;&#x7B2C;&#x4E00;&#x4E2A;stop&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x8F93;&#x51FA;&#x503C;&#x3002;</strong></p>
+<pre class="language-"><code>// &#x8BED;&#x6CD5;
+[&quot;step&quot;,
+    input: number,
+    stop_output_0: OutputType,
+    stop_input_1: number, stop_output_1: OutputType,
+    stop_input_n: number, stop_output_n: OutputType, ...
+]: OutputType
+
+paint: {
+    // &#x5C0F;&#x4E8E;100&#x65F6;&#xFF0C;circles&#x7684;&#x989C;&#x8272;&#x4E3A;Blue, &#x5927;&#x5C0F;&#x4E3A;20px 
+    // &#x5927;&#x4E8E;&#x7B49;&#x4E8E;100&#x4E14;&#x5C0F;&#x4E8E;750&#x4E4B;&#x95F4;&#x65F6;&#xFF0C;circles&#x7684;&#x989C;&#x8272;&#x4E3A;Yellow, &#x5927;&#x5C0F;&#x4E3A;30px&#xFF08;&#x5DE6;&#x95ED;&#x53F3;&#x5F00;&#x533A;&#x95F4;&#xFF09;
+    // &#x5927;&#x4E8E;&#x7B49;&#x4E8E;750&#x65F6;&#xFF0C;circles&#x7684;&#x989C;&#x8272;&#x4E3A;Pink, &#x5927;&#x5C0F;&#x4E3A;40px 
+    &apos;circle-color&apos;: [
+        &apos;step&apos;,
+        [&apos;get&apos;, &apos;point_count&apos;],
+        &apos;#51bbd6&apos;,
+        100,
+        &apos;#f1f075&apos;,
+        750,
+        &apos;#f28cb1&apos;
+    ],
+    &apos;circle-radius&apos;: [
+        &apos;step&apos;,
+        [&apos;get&apos;, &apos;point_count&apos;],
+        20,
+        100,
+        30,
+        750,
+        40
+    ]
+}
+</code></pre><ul>
+<li>concat&#xFF0C;downcase&#xFF0C;upcase&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x64CD;&#x4F5C;&#xFF0C;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x4E2D;&#x5F88;&#x5C11;&#x7528;&#xFF0C;&#x5904;&#x7406;&#x6570;&#x636E;&#x6E90;&#x5934;&#x5C31;&#x884C;&#xFF09; </li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; lujiannb@qq.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2024-06-04 02:26:08
 </span></footer>
                                 
                                 </section>
@@ -761,10 +923,14 @@
 
             
                 
-                <a href="数据源和图层配置.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 数据源和图层配置">
+                <a href="数据源和图层配置.html" class="navigation navigation-prev " aria-label="Previous page: 数据源和图层配置">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="点线面创建及更新Source来实现图层数据的新增、修改、删除.html" class="navigation navigation-next " aria-label="Next page: 点线面创建及更新Source来实现图层数据的新增、修改、删除">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -773,7 +939,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Mapbox常用表达式","level":"1.6.4","depth":2,"next":{"title":"css","level":"1.7","depth":1,"ref":"","articles":[{"title":"弹性盒布局滚动条设置","level":"1.7.1","depth":2,"path":"css/弹性盒布局滚动条设置.md","ref":"css/弹性盒布局滚动条设置.md","articles":[]}]},"previous":{"title":"数据源和图层配置","level":"1.6.3","depth":2,"path":"超图（MapboxGL）/数据源和图层配置.md","ref":"超图（MapboxGL）/数据源和图层配置.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","back-to-top-button","chapter-fold","splitter","lightbox","custom-favicon","tbfed-pagefooter","hide-element","-lunr","-search","-sharing","sharing-plus","search-pro","-highlight","prism","hide-element","code","donate"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy lujiannb@qq.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{},"disqus":{"shortName":"gitbookuse"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"https://i.postimg.cc/vB86gftt/zhi-pay.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://i.postimg.cc/yY29QJ77/wei-pay.png","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./img/user.ico","lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":false,"all":["douban","facebook","google","weibo","qq","qzone","pocket","stumbleupon","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"./img/user.jpg","style":"background: none; max-height: 30px; min-height: 30px"},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"超图（MapboxGL）/Mapbox常用表达式.md","mtime":"2024-06-03T09:33:54.347Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-06-03T09:34:39.648Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Mapbox常用表达式","level":"1.6.4","depth":2,"next":{"title":"点线面创建及更新Source来实现图层数据的新增、修改、删除","level":"1.6.5","depth":2,"path":"超图（MapboxGL）/点线面创建及更新Source来实现图层数据的新增、修改、删除.md","ref":"超图（MapboxGL）/点线面创建及更新Source来实现图层数据的新增、修改、删除.md","articles":[]},"previous":{"title":"数据源和图层配置","level":"1.6.3","depth":2,"path":"超图（MapboxGL）/数据源和图层配置.md","ref":"超图（MapboxGL）/数据源和图层配置.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","back-to-top-button","chapter-fold","splitter","lightbox","custom-favicon","tbfed-pagefooter","hide-element","-lunr","-search","-sharing","sharing-plus","search-pro","-highlight","prism","hide-element","code","donate"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy lujiannb@qq.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{},"disqus":{"shortName":"gitbookuse"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"https://i.postimg.cc/vB86gftt/zhi-pay.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://i.postimg.cc/yY29QJ77/wei-pay.png","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./img/user.ico","lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":false,"all":["douban","facebook","google","weibo","qq","qzone","pocket","stumbleupon","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"./img/user.jpg","style":"background: none; max-height: 30px; min-height: 30px"},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"超图（MapboxGL）/Mapbox常用表达式.md","mtime":"2024-06-03T18:26:08.734Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-06-03T18:26:39.012Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
