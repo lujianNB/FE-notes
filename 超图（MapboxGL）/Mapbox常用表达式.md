@@ -70,12 +70,12 @@
 
 // 单个字符串
 'paint': {
-	'color': [
-      '1号线', ['case', ['boolean', ['feature-state', 'hover'], false], 'blue', ['boolean', ['feature-state', 'click'], false], 'blue', '#f61c13'],
-      '2号线', ['case', ['boolean', ['feature-state', 'hover'], false], 'blue', ['boolean', ['feature-state', 'click'], false], 'blue', '#efa573'],
-      '地铁三号线', ['case', ['boolean', ['feature-state', 'hover'], false], 'blue', ['boolean', ['feature-state', 'click'], false], 'blue', '#f9a81a'],
-      ['case', ['boolean', ['feature-state', 'hover'], false], 'blue', ['boolean', ['feature-state', 'click'], false], 'blue', 'blue']
-    ]
+	'color': ['match', ['get', 'name'],
+            'line-1', '#f61c13',
+            'line-2', '#efa573',
+            'line-3', '#f9a81a',
+            'blue'
+          ]
 }
 ```
 
