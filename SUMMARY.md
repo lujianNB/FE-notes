@@ -39,6 +39,10 @@
     * [添加控件](超图（MapboxGL）/添加控件.md)
     * [绘制功能和面积长度测算](超图（MapboxGL）/绘制功能和面积长度测算.md)
     * [地物查询](超图（MapboxGL）/地物查询.md)
+    * [地物编辑](超图（MapboxGL）/地物编辑.md)
+    * [空间分析](超图（MapboxGL）/空间分析.md)
+    * [数据可视化](超图（MapboxGL）/数据可视化.md)
+    * [iServer配置图层服务以及前端使用](超图（MapboxGL）/iServer配置图层服务以及前端使用.md)
 * css
     * [弹性盒布局滚动条设置](css/弹性盒布局滚动条设置.md)
 * js
