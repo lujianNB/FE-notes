@@ -16,8 +16,7 @@
         "-highlight",
         "prism",
         "hide-element",
-        "code",
-        "donate"
+        "code"
     ],
     "pluginsConfig": {
         "favicon": "./img/user.ico",
