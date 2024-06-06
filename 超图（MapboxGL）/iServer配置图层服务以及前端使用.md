@@ -78,7 +78,7 @@
 
 * iServer配置图层服务
 
-1.在https://www.supermapol.com/market/timelicense/desktop下载iServer桌面应用(有试用，需要购买的，据我所知目前不支持mac，不是太清楚)
+1.在<a href="https://www.supermapol.com/market/timelicense/desktop">https://www.supermapol.com/market/timelicense/desktop</a>下载iServer桌面应用(需要购买的)
 
 2.启动应用，打开数据源。
 
