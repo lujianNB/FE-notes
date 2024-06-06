@@ -23,9 +23,8 @@
 'filter': [
 	'all',
 	['==', 'extrude', 'true'],
-	['>', 'height', 5],
 	['<=', 'height', 3]
-] // 筛选出图层里数据extrude为true,height>5且height<=3的元素
+] // 筛选出图层里数据extrude为true5且height<=3的元素
 ```
 
 * any 逻辑或

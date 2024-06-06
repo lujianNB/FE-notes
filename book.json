@@ -57,14 +57,6 @@
                 "pocket", "stumbleupon", "whatsapp"
             ]
         },
-        "donate": {
-            "wechat": "https://i.postimg.cc/yY29QJ77/wei-pay.png",
-            "alipay": "https://i.postimg.cc/vB86gftt/zhi-pay.png",
-            "title": "",
-            "button": "赏",
-            "alipayText": "支付宝打赏",
-            "wechatText": "微信打赏"
-        },
         "disqus": {
             "shortName": "gitbookuse"
         }
