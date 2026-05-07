@@ -44,6 +44,8 @@
     * [空间分析](超图（MapboxGL）/空间分析.md)
     * [数据可视化](超图（MapboxGL）/数据可视化.md)
     * [iServer配置图层服务以及前端使用](超图（MapboxGL）/iServer配置图层服务以及前端使用.md)
+* simple-mind-map（思维导图）
+    * [simple-mind-map的使用](simple-mind-map（思维导图）/simple-mind-map的使用.md)
 * css
     * [弹性盒布局滚动条设置](css/弹性盒布局滚动条设置.md)
 * js
