@@ -122,3 +122,7 @@ this.nodeData = {
     }
 }
 ```
+
+## 效果图
+
+<img src="../img/simple-mind-map.png" alt=""></img>
